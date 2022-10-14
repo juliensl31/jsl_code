@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    min-width: 400px;
+}
+
+header {
+    padding: 15px;
+    background-color: #182029;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0; padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+nav ul li a {
+    color: #ff5400;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+nav ul li a:hover {
+    font-weight: 700;
+    text-decoration: none;
+    color: #ff5400;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color:#ff5400;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: overline;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited{
+    color: #ff5400;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: 2em;
+    color: #ff5400;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+footer {
+    border-top: 3px solid black;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+
+
+#logo{
+    height: 80px;
+}
+
+#flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#projet-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(70px, auto);
+    grid-gap: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#contact {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#jump_start {
+    background: url('images/points.png'), center url('images/jump-start.png');
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+}
+
+.parallax {
+    background-image: url('images/header.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; 
+}
+
+.fab{
+    font-size: 60px;
+    color:#182029;
+}
+.fas{
+    font-size: 60px;
+    color:#182029;
+}
+
+.texte-presentation {
+    text-align: center;
+}
+
+.container {
+    width: 1500px;
+    margin: 0 auto;
+}
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: none;
+}
+
+
+.skills {
+    padding: 0 50px;
+}
+
+.projet:hover {
+    opacity: .7;
+}
+
+.projet-a {
+    background: center url('images/jump-start.png');
+    background-size: cover;
+}
+.projet-b {
+    background: center url('images/rodeo-pump.jpg');
+    background-size: cover;
+}
+.projet-c {
+    background: center url('images/pac-man.jpg');
+    background-size: cover;
+}
+.projet-d {
+    background: center url('images/mega-pop.jpg');
+    background-size: cover;
+}
+
+.bouton {
+    background: #182029;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 15px;
+}
+.bouton:hover{
+    border-radius: 5px;
+    color: #ff5400;
+    padding: 15px 30px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+
+@media all and (max-width: 1130px) {
+    .container {
+        width: 700px;
+    }
+    #flex-presentation, .texte-presentation {
+        padding: 15px;
+    }
+    #projet-grille {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+    }
+}
+
+@media all and (max-width: 730px) {
+    .container {
+        width: 100%;
+    }
+    .gauche-presentation {
+        width: 100%;
+    }
+}
