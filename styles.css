@@ -109,7 +109,9 @@ footer ul li a:hover {
     justify-content: space-between;
     align-items: center;
 }
-
+#section {
+    margin-bottom: 50px;
+}
 #skills-grille {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -149,7 +151,6 @@ footer ul li a:hover {
     grid-gap: 30px;
     text-align: center;
     justify-content: center;
-    margin-bottom: 100px;
 }
 #icone-grille .fab:hover{
     color:#ff5400;
@@ -162,9 +163,6 @@ footer ul li a:hover {
     grid-auto-rows: minmax(70px, auto);
     grid-gap: 15px;
 }
-#portfolio{
-    margin-bottom: 80px;
-}
 
 #temoignage p{
     text-align: center;
@@ -172,6 +170,7 @@ footer ul li a:hover {
     font-weight: 300;
     font-family: monospace;
 }
+
 
 #parallax {
     background-image: url('images/header.jpg');
@@ -356,8 +355,9 @@ footer ul li a:hover {
 
 .temoignage-details {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: baseline;
+    margin-right: 200px;
 }
 .temoignage-photo img {
     border-radius: 50%;
