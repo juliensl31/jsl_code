@@ -205,7 +205,16 @@ footer ul li a:hover {
     text-align: center;
 }
 
-#annexe {
+#scroll_to_top {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+  }
+  
+#annexe a {
     display: flex;
     justify-content: center;
     height: 120px;

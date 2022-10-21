@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
@@ -18,8 +19,28 @@
     <script src="https://kit.fontawesome.com/1c7b3f8009.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="images/cropped-logo-vertical-blanc-180x180.png" type="image/png" />
     <link href="styles.css" rel="stylesheet">
+    <script>
+        $(document).ready(function () {
+            function scroll_to_top(div) {
+                $(div).click(function () {
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 'slow');
+                });
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() < 500) {
+                        $(div).fadeOut();
+                    } else {
+                        $(div).fadeIn();
+                    }
+                });
+            }
+            scroll_to_top("#scroll_to_top");
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182384790-1"></script>
+    
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -196,7 +217,9 @@
             </a>
         </div>
     </section>
-
+    <div id='scroll_to_top' class='opacity'>
+        <img src="images/scrolltop.png" alt="Retourner en haut">
+    </div>
     <footer>
         <div class="container">
             © JSL Code
