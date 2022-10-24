@@ -7,7 +7,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    min-width: 740px;
+    min-width: 425px;
 }
 
 header {
@@ -212,7 +212,8 @@ footer ul li a:hover {
     right: 50px;
     display: none;
   }
-  
+
+
 #annexe a {
     display: flex;
     justify-content: center;
@@ -220,6 +221,9 @@ footer ul li a:hover {
 }
 #annexe-cgv {
     margin-bottom: 100px;
+}
+#annexe-cgv p{
+    text-align: justify;
 }
 #annexe-cgv h1 {
     color:#ff5400;
@@ -418,12 +422,10 @@ footer ul li a:hover {
     }
 
 
-@media all and (max-width: 700px) {
-    img {
-        padding: 50px;
-    }
+@media all and (max-width: 780px) {
     h2 {
         padding-bottom: 0;
+        padding-top: 20px;
     }
     .container {
         width: 100%;
@@ -432,7 +434,7 @@ footer ul li a:hover {
         padding: 0;
         margin: 0;
     }
-    #Skills-grille {
+    #skills-grille {
         grid-template-columns: repeat(1, 1fr);
         padding: 10px;
     }
@@ -448,5 +450,26 @@ footer ul li a:hover {
         grid-template-columns: repeat(1, 1fr);
         padding: 50px;
     }
-    
+    #parallax-section{
+        height: 150px;
+    }
+    #parallax-footer{
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .container{
+        width: 100%;
+    }
+    #temoignage, #icone-grille, #parallax {
+        display: none;
+    }
+    #xp-grille{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .progress-card {
+        grid-row: 2 / 4;
+        grid-column: 1 / 3;
+    }
 }
