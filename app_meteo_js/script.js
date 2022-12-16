@@ -20,8 +20,10 @@ if("geolocation" in navigator) {
           // console.log(reponse);
           let temperature = reponse.main.temp;
           let ville       = reponse.name;
+          let vent        = reponse.wind.speed;
           // console.log(temperature);
           document.querySelector('#temperature_label').textContent = temperature;
+          document.querySelector('#vent_label').textContent = vent;
           document.querySelector('#ville').textContent = ville;
         }
         else {
@@ -36,7 +38,7 @@ if("geolocation" in navigator) {
   }
 }
 else {
-  villeChoisie = "saint-saulve";
+  villeChoisie = "Toulouse";
   recevoirTemperature(villeChoisie);
 }
 
@@ -47,7 +49,7 @@ changerDeVille.addEventListener('click', () => {
 });
 
 function erreur() {
-  villeChoisie = "Saint-Saulve";
+  villeChoisie = "Toulouse";
   recevoirTemperature(villeChoisie);
 }
 
@@ -67,8 +69,10 @@ function recevoirTemperature(ville) {
         // console.log(reponse);
         let temperature = reponse.main.temp;
         let ville       = reponse.name;
+        let vent        = reponse.wind.speed;
         // console.log(temperature);
         document.querySelector('#temperature_label').textContent = temperature;
+        document.querySelector('#vent_label').textContent = vent;
         document.querySelector('#ville').textContent = ville;
       }
       else {

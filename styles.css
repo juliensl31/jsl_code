@@ -521,6 +521,10 @@ footer ul li a:hover {
     font-size: 5em;
   }
   
+  #vent {
+    font-size: 2em;
+  }
+  
   #changer {
     background: rgba(178, 223, 251, .3);
     cursor: pointer;
