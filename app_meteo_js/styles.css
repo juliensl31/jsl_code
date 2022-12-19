@@ -1,0 +1,46 @@
+/* meteo index.html */
+
+body {
+    background-image: url('../images/buildings-1804479_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    min-width: 400px;
+  }
+  
+  footer {
+    background: rgba(178, 223, 251, .3);
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+  #ville {
+    text-transform: capitalize;
+    color: #ff5400;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  #temperature {
+    font-size: 5em;
+  }
+  
+  #vent {
+    font-size: 2em;
+  }
+  
+  #changer {
+    background: rgba(178, 223, 251, .3);
+    cursor: pointer;
+  }
+

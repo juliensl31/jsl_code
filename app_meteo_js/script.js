@@ -1,5 +1,6 @@
 let villeChoisie;
 
+
 if("geolocation" in navigator) {
   navigator.geolocation.watchPosition((position) => {
     
@@ -81,3 +82,6 @@ function recevoirTemperature(ville) {
     }
   }
 }
+
+let date = new Date().getFullYear();
+copyright.innerHTML = `${date} © JSL Code`;
