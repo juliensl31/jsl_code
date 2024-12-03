@@ -155,10 +155,6 @@ footer ul li a:hover {
     margin: 0px 0px 15px;
 }
 
-#xp .cards {
-    height: 350px;
-}
-
 #xp h3 {
     color: #182029;
     text-decoration: overline;
@@ -252,8 +248,8 @@ footer ul li a:hover {
     position: fixed;
     width: 35px;
     height: 35px;
-    bottom: 50px;
-    right: 50px;
+    bottom: 30px;
+    right: 30px;
     display: none;
 }
 
@@ -375,11 +371,16 @@ footer ul li a:hover {
 
 .cards {
     text-align: center;
+    height: 350px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -moz-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
+}
+
+.card p {
+    text-align: justify;
 }
 
 .wrap {
@@ -400,13 +401,12 @@ footer ul li a:hover {
     text-align: start;
     padding-left: 15px;
     background: #ff5400;
-    color: #182029;
+    color: #FFFFFF;
     font-weight: 1.5rem;
     font-weight: bold;
 }
 
 .projet {
-    background: black;
     border-radius: 5px;
     color: white;
     padding: 90px 25px;
@@ -418,7 +418,7 @@ footer ul li a:hover {
 }
 
 .projet-a {
-    background: center url('images/flow_events.png');
+    background: center top url('images/flow_events.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -426,7 +426,7 @@ footer ul li a:hover {
 }
 
 .projet-b {
-    background: center url('images/Site-lumiere.png');
+    background: center top url('images/Site-lumiere.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -434,7 +434,7 @@ footer ul li a:hover {
 }
 
 .projet-c {
-    background: center url('images/Site-ours.png');
+    background: center top url('images/Site-ours.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -442,7 +442,7 @@ footer ul li a:hover {
 }
 
 .projet-d {
-    background: center url('images/Site-mdlp.png');
+    background: center top url('images/Site-mdlp.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -450,7 +450,7 @@ footer ul li a:hover {
 }
 
 .projet-e {
-    background: center url('images/hangman.png');
+    background: center top url('images/hangman.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -458,7 +458,7 @@ footer ul li a:hover {
 }
 
 .projet-f {
-    background: center url('images/meteo.png');
+    background: center top url('images/meteo.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -466,7 +466,7 @@ footer ul li a:hover {
 }
 
 .projet-g {
-    background: center url('images/TwitterClone.png');
+    background: center top url('images/TwitterClone.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -474,7 +474,7 @@ footer ul li a:hover {
 }
 
 .projet-h {
-    background: center url('images/CineVerse.png');
+    background: center top url('images/CineVerse.png');
     background-size: cover;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -489,9 +489,7 @@ footer ul li a:hover {
 }
 
 .temoignage-photo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    border-radius: 50%;
     margin: 20px;
 }
 
