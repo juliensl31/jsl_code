@@ -371,7 +371,7 @@ footer ul li a:hover {
 
 .cards {
     text-align: center;
-    height: 350px;
+    height: 400px;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
@@ -379,9 +379,6 @@ footer ul li a:hover {
     -moz-box-shadow: 0px 0px 10px 0px rgba(24, 32, 41, 0.5);
 }
 
-.card p {
-    text-align: justify;
-}
 
 .wrap {
     padding: 10px;
