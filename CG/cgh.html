@@ -2,579 +2,877 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+                integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+                crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous">
+                </script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/1c7b3f8009.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="images/cropped-logo-vertical-blanc-180x180.png" type="image/png" />
-    <link href="../styles.css" rel="stylesheet">
-    <script>
-        $(document).ready(function () {
-            function scroll_to_top(div) {
-                $(div).click(function () {
-                    $('html,body').animate({
-                        scrollTop: 0
-                    }, 'slow');
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous">
+                </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous">
+                </script>
+        <script src="https://kit.fontawesome.com/1c7b3f8009.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="images/cropped-logo-vertical-blanc-180x180.png" type="image/png" />
+        <link href="../styles.css" rel="stylesheet">
+        <script>
+                $(document).ready(function () {
+                        function scroll_to_top(div) {
+                                $(div).click(function () {
+                                        $('html,body').animate({
+                                                scrollTop: 0
+                                        }, 'slow');
+                                });
+                                $(window).scroll(function () {
+                                        if ($(window).scrollTop() < 500) {
+                                                $(div).fadeOut();
+                                        } else {
+                                                $(div).fadeIn();
+                                        }
+                                });
+                        }
+                        scroll_to_top("#scroll_to_top");
                 });
-                $(window).scroll(function () {
-                    if ($(window).scrollTop() < 500) {
-                        $(div).fadeOut();
-                    } else {
-                        $(div).fadeIn();
-                    }
-                });
-            }
-            scroll_to_top("#scroll_to_top");
-        });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182384790-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-182384790-1"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+                function gtag() {
+                        dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
 
-        gtag('config', 'UA-182384790-1');
-    </script>
-    <title>CG d'hébergement internet</title>
-    <style>
-        body {
-            background: #f3f3f3;
-            color: #182029;
-            }
-    </style>
+                gtag('config', 'UA-182384790-1');
+        </script>
+        <title>CG d'hébergement internet</title>
+        <style>
+                body {
+                        background: #f3f3f3;
+                        color: #182029;
+                }
+        </style>
 </head>
 
 <body>
-    <header>
-        <div id="annexe" class="container">
-            <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
-        </div>
-    </header>
-    <section id="annexe-cgv" class="container">
-        <h1>conditions générales d'hébergement internet</h1>
-        <div id="divider">
-            <i class="fab fa-buffer"></i>
-        </div>
+        <header>
+                <div id="annexe" class="container">
+                        <a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
+                </div>
+        </header>
+        <section id="annexe-cgv" class="container">
+                <h1>conditions générales d'hébergement internet</h1>
+                <div id="divider">
+                        <i class="fab fa-buffer"></i>
+                </div>
 
-        <div>
-            <h3><b>ARTICLE 1 : OBJET</b></h3>
-            <p>Les présentes conditions générales d’hébergement ont pour objet de définir
-                    les conditions et les modalités selon lesquelles JSL Code met à disposition de son client ses
-                    produits d’hébergement. Le fait de passer commande ou d’accepter un devis implique l’adhésion sans
-                    réserve du Client aux présentes conditions générales d’hébergement. Le Client s’engage à disposer du
-                    pouvoir, de l’autorité et de la capacité nécessaires à la conclusion et à l’exécution des
-                    obligations prévues aux présentes conditions.</p>
-            <p></p>
-            <h3><b>ARTICLE 2 : DÉFINITIONS</b></h3>
-            <p>Client : Personne physique ou morale, signataire des présentes conditions
-                    générales de vente, responsable d’un ou de plusieurs sites Internet hébergé par JSL Code.</p>
-            <p>Espace web : Espace de stockage alloué par JSL Code à chaque client.
-            </p>
-            <p>Fournisseur : est appelé fournisseur dans ce présent document, JSL
-                    Code.</p>
-            <p>Internet : ensemble de réseaux interconnectés, situés à travers le
-                    monde.</p>
-            <p>Hébergement : Ressources techniques et moyens mis à la disposition du client
-                    lui permettant de publier et d’exploiter un ou plusieurs sites internet.</p>
-            <p>Hébergement mutualisé : Hébergement de plusieurs ensemble de pages et
-                    d’éléments constitutifs des sites Internet propres à plusieurs clients sur un serveur commun. Ces
-                    clients partagent collectivement les ressources et l’espace disponible sur le serveur.</p>
-            <p>Identifiants : Couple nom d’utilisateur / mot de passe permettant au client
-                    de s’identifier sur le réseau.</p>
-            <p>Nom de domaine : Nom désignant de manière unique l’emplacement d’un site
-                    internet.</p>
-            <p>Serveur : ordinateur maître contrôlant certains accès et certaines ressources
-                    sur le réseau.</p>
-            <p>Netiquette : Ensemble de règles et d’usage des utilisateurs d’Internet, parmi
-                    lesquels :</p>
-            <p>· Ne pas envoyer des courriers électroniques en masse à des personnes qui
-                    n’en ont pas fait la demande (« junkmail » ou « spam »).</p>
-            <p>· Ne pas poster un message dans un ou plusieurs groupes de discussion, avec
-                    un contenu sans rapport avec le thème de ces groupes.</p>
-            <p>· Respecter les droits d’auteurs.</p>
-            <p>· Ne pas aller à l’encontre de la RFC1855.</p>
-            <p>Whois : Outils de recherche en ligne, librement accessible sur Internet
-                    permettant l’obtention d’ informations concernant tout déposant d’un nom de domaine.</p>
-            <p>Conditions contractuelles : Les conditions particulières et éventuelles
-                    annexes sont incorporées par référence aux conditions générales et sont indissociables des
-                    conditions générales.</p>
-            <p></p>
-            <h3><b>ARTICLE 3 : RÉALISATION ET FACTURATION DES PRESTATIONS</b></h3>
-            
-            <p>JSL Code procède à l’hébergement du site Internet du client sur ses
-                    infrastructures suite à l’acceptation par le client du devis correspondant. Le contrat entre le
-                    client et JSL Code est formé au moment de la signature d’acceptation du devis par le client. Le
-                    contrat est réputé définitif dès la mise en oeuvre du service par JSL Code. En cas de litige entre
-                    les deux parties concernées, la date de mise en oeuvre sera celle relevée par le serveur de JSL
-                    Code.</p>
-            <p></p>
-            <h3><b>ARTICLE 4 : MOYENS ET SUPPORT TECHNIQUE</b></h3>
-            
-            <p>L’infrastructure réseau de JSL Code est accessible pour le grand public par
-                    le réseau Internet au moyen de serveurs connectés au réseau Internet. JSL Code fournit la puissance
-                    informatique, les équipements de sécurité et les logiciels nécessaires au fonctionnement du service
-                    Internet proposé au Client, la liste de ces logiciels variant en fonction des abonnements proposés.
-                    Ces options sont décrites sur le devis signé par le client. JSL Code met à disposition un support
-                    technique disponible par téléphone et e-mail.</p>
-            <p></p>
-            <h3><b>ARTICLE 5 : CONDITIONS D’EXPLOITATION</b></h3>
-            
-            <p>JSL Code s’engage à mettre en oeuvre tous ses moyens et ses compétences pour
-                    assurer la permanence, la continuité et la qualité des services qu’elle propose, et souscrit à ce
-                    titre une obligation de moyens. En conséquence, JSL Code s’efforcera d’offrir un accès internet
-                    24h/24h, 7 jours sur 7 sans qu’elle puisse pour autant le garantir, compte-tenu de la nature du
-                    réseau. Le client reconnaît par les présentes que des fluctuations de la bande passante et les aléas
-                    permanents du fournisseur d’accès sont des éléments pouvant entraîner une discontinuité dans l’accès
-                    aux serveurs, indépendante de la volonté de JSL Code et extérieure à ses moyens techniques. JSL Code
-                    garantit un accès au site par les internautes dans les conditions d’une fréquentation raisonnable.
-                    Dans l’hypothèse où le client aurait fait le choix d’une prestation non-adaptée au trafic réel de
-                    son site et que les capacités offertes en terme de bande passante et/ou de ressources serveurs par
-                    les prestataires deviendraient insuffisantes, les parties se concerteront afin d’envisager des
-                    modifications techniques et financières des conditions d’hébergement du client.</p>
-            <p></p>
-            <h3><b>ARTICLE 6 : INFORMATION AU CLIENT ET CONFORMITÉ DU SERVICE</b></h3>
-            
-            <p>Le client reconnaît avoir vérifié l’adéquation du service à ses besoins et
-                    avoir reçu de JSL Code toutes les informations et conseils nécessaires pour souscrire au présent
-                    engagement en connaissance de cause.</p>
-            <p></p>
-            <h3><b>ARTICLE 7 : OBLIGATION DE JSL Code</b></h3>
-            
-            <p>JSL Code s’engage à apporter tout le soin et la diligence nécessaires à la
-                    fourniture d’un service de qualité conformément aux usages de la profession et à l’état de l’art.
-                    Elle n’est soumise qu’à une obligation de moyens. Cependant, JSL Code s’engage à : • Assurer l’accès
-                    logiciel aux serveurs 24h/24 tous les jours de l’année. En cas d’absolue nécessité, JSL Code se
-                    réserve la possibilité d’interrompre les serveurs afin de procéder à une intervention technique pour
-                    en améliorer leur fonctionnement ou pour toute opération de maintenance. Dans la mesure du possible,
-                    JSL Code informera le client dans un délai raisonnable de la nature et de la durée de
-                    l’intervention, afin que le client prenne ses dispositions. • Intervenir rapidement en cas
-                    d’incident. • Assurer le maintien au meilleur niveau de la qualité de ses outils.</p>
-            <p></p>
-            <h3><b>ARTICLE 8 : RESPONSABILITÉ DE JSL Code</b></h3>
-            
-            <p>En aucun cas, la responsabilité de JSL Code ne pourra être recherchée en cas
-                    de :</p>
-            <p>• Faute, négligence, omission ou défaillance du client, non-respect des
-                    conseils donnés.</p>
-            <p>• Divulgation ou utilisation illicite des identifiants confidentiels du
-                    client.</p>
-            <p>• Faute, négligence ou omission d’un tiers sur lequel JSL Code n’a aucun
-                    pouvoir de contrôle et/ou de surveillance.</p>
-            <p>• Force majeur, événement ou incident indépendant de la volonté de JSL
-                    Code,</p>
-            <p>• Arrêt de l’hébergement pour toute cause visée à l’article 10</p>
-            <p>• Divulgation ou utilisation illicite du mot de passe remis
-                    confidentiellement au client.</p>
-            <p>JSL Code est responsable, selon les règles de droit civil, des services
-                    fournis au client. JSL Code s’engage à mettre tous ses moyens en oeuvre pour assurer dans des
-                    conditions optimales les services du client, sauf dans l’hypothèse où une interruption du service
-                    est expressément demandée par une autorité administrative ou juridictionnelle compétente. En outre,
-                    la responsabilité de JSL Code ne sera pas engagée pour tout cas de force majeur habituellement
-                    reconnu par les tribunaux, notamment :</p>
-            <p>• Si l’exécution du contrat, ou de toute obligation incombant à JSL Code au
-                    titre des présentes, est empêchée, limitée ou perturbée du fait d’un incendie, d’une explosion, de
-                    défaillance des réseaux de transmission, effondrement des installations, épidémie, tremblement de
-                    terre, inondation, panne d’électricité, guerre, embargo, loi, injonction, demande ou exigence de
-                    tout gouvernement, grève, boycott, ou autre circonstance hors du contrôle raisonnable de JSL Code («
-                    cas de force majeure »), alors JSL Code, sous réserve d’une prompte notification au client, devra
-                    être dispensée de l’exécution de ses obligations dans la limite de cet empêchement, limitation ou
-                    perturbation, et le client sera de la même manière dispensé de l’exécution de ses obligations dans
-                    la mesure où les obligations de cette partie sont relatives à l’exécution ainsi empêchée, limitée ou
-                    dérangée, sous réserve que la partie ainsi affectée fasse ses meilleurs efforts pour éviter ou
-                    pallier de telles causes auront cessé ou été supprimées. La partie affectée par un cas de force
-                    majeure devra tenir l’autre partie régulièrement informée par courrier électronique de l’état, de la
-                    suppression ou du rétablissement de ce cas de force majeure. Si les effets d’un cas de force majeure
-                    devaient avoir une durée supérieure à 30 jours, le contrat pourra être résilié de plein droit à la
-                    demande de l’une ou l’autre partie, sans droit à indemnité de part et d’autre.</p>
-            <p>• Sont du fait du client, notamment dans les cas ci-après :</p>
-            <p>– Détérioration de l’application,</p>
-            <p>– Mauvaise utilisation des terminaux par le client ou par sa
-                    clientèle,</p>
-            <p>– Destruction partielle ou totale des informations transmises ou stockées à
-                    la suite d’erreurs imputables directement ou indirectement au client. JSL Code ne pourra être tenue
-                    responsable envers le client de l’introduction d’un virus informatique dans le serveur Web ou dans
-                    le site ayant un effet sur son bon fonctionnement, de la migration du site dans un environnement
-                    matériel ou logiciel différent, des modifications apportés aux composants logiciels par une personne
-                    autre qu’une personne de JSL Code, d’une baisse du chiffre d’affaire consécutive au fonctionnement
-                    ou à l’absence de fonctionnement, ou à l’utilisation du site ou des informations s’y trouvant ou
-                    devant s’y trouver, d’intrusion illégale ou non autorisée de tout tiers dans le serveur Web ou dans
-                    le site, d’un encombrement temporaire de la bande passante d’une interruption du service de
-                    connexion à Internet pour une cause hors contrôle du concepteur. JSL Code ne pourra être tenue
-                    responsable du contenu des informations, du son, du texte, des images, des éléments de forme, des
-                    éléments multimédias, et données accessibles sur le site, transmises ou mises en ligne par le client
-                    et ce à quelque titre que ce soit. JSL Code ne saurait pas être tenue pour responsable du
-                    non-respect total ou partiel d’une obligation et/ou défaillance des prestataires de transit et en
-                    particulier de son ou ses fournisseurs d’accès. A ce titre, JSL Code informe le client que ses
-                    prestations sont indépendantes d’autres opérateurs techniques et que sa responsabilité ne peut être
-                    engagée par leur défaillance. Les réparations dues par JSL Code en cas de défaillance du service qui
-                    résulterait d’une faute établie à son encontre correspondront au préjudice direct, personnel et
-                    certain lié à la défaillance en cause, à l’exclusion expresse de tout dommage indirect.</p>
-            <p>En aucun cas, JSL Code ne pourra être tenue responsable des préjudices
-                    indirects, c’est à dire tous ceux qui ne résultent pas directement et exclusivement de la
-                    défaillance partielle ou totale du service fourni par JSL Code, tels que préjudice commercial, perte
-                    de commandes, atteinte à l’image de la marque, trouble commercial quelconque, perte de bénéfices ou
-                    de clients, pour lesquels le client sera son propre assureur ou pourra contracter les assurances
-                    appropriées. Toute action dirigée contre le client par un tiers constitue un préjudice indirect et
-                    par conséquent, n’ouvre pas droit à réparation. En tout état de cause, le montant des
-                    dommages-intérêts qui pourraient être mis à la charge de JSL Code, si sa responsabilité était
-                    engagée, sera limité au montant des sommes effectivement versées par le client à JSL Code pour la
-                    période considérée ou facturées au client par JSL Code ou au montant des sommes correspondant au
-                    prix de la prestation, pour la part du service pour laquelle la responsabilité de JSL Code a été
-                    retenue. Sera pris en considération le montant le plus faible de ces sommes. JSL Code effectue des
-                    sauvegardes des données hébergées dans le seul but d’une reprise sur incident. Il appartient en
-                    conséquence au client de prendre toutes mesures nécessaires à la sauvegarde de ses données en cas de
-                    perte, ou de détérioration des données confiées, quelle qu’en soit la cause, y compris celle non
-                    expressément sollicitée par le client et spécialement facturée. Pour certaines prestations, le
-                    client dispose de sauvegardes régulières. Il lui appartient de mettre en oeuvre une mesure de
-                    sauvegarde effectuée par ses soins et de conserver lui-même toutes les données que JSL Code lui aura
-                    mis à disposition. Il en est de même pour la collecte temporaire des adresses « IP » considérée
-                    comme une mesure de sécurité interne, lesquelles adresses ne sont pas conservées par JSL Code
-                    au-delà d’un délai d’un mois. Toute réclamation ultérieure, même sur une injection judiciaire ou
-                    administrative ne pourra donc aboutir, JSL Code n’étant plus en possession de ces données non
-                    archivées. La responsabilité de JSL Code ne pourra donc pas être recherchée en cas d’éventuelle
-                    carence dans la mise en oeuvre des mesures de sécurité, notamment de sauvegarde. Cependant, si la
-                    responsabilité de JSL Code devait être relevée par une autorité judiciaire, elle ne pourrait être
-                    supérieure à un montant égal au montant des prestations facturées au client pour la période des 12
-                    derniers mois.</p>
-            <p></p>
-            <h3><b>ARTICLE 9 : OBLIGATIONS ET RESPONSABILITÉ DU CLIENT</b></h3>
-            
-            <p>1. Le client s’engage à ne pas héberger de sites racistes ou illégaux et ceux
-                    ayant des liens hypertextes vers ce type de sites sont interdits sur les serveurs de JSL Code. De
-                    même, il s’interdit à tout hébergement de site sur des pages ayant trait à tout prosélytisme relatif
-                    à des mouvements sectaires tels que dénoncés sur le rapport parlementaire « les sectes en France »,
-                    ou considérés comme représentant un risque sectaire pour les services de l’État, ou reconnus comme
-                    tels par une décision de Justice ayant autorité de la chose jugée. Il s’engage également à ne pas
-                    faire de redirection de son domaine vers ce type de sites. Le client s’engage à ne pas mettre à
-                    disposition du public, à partir de son site hébergé sur les serveurs de JSL Code, de fichiers
-                    multimédias dont il ne possède pas les droits. Il s’engage également à ne pas inclure sur son site
-                    de liens hypertextes et à ne pas faire de redirection de son domaine vers des sites diffusant ce
-                    type de service. Le client est responsable du respect du volume de trafic et de l’espace de stockage
-                    autorisé par la formule d’hébergement et options auxquelles il a souscrit. Le client est informé que
-                    les publications constituent notamment l’oeuvre de l’esprit protégées par les droits d’auteurs au
-                    sens de l’article L 112-2 1er et 2ème du Code de la Propriété Intellectuelle. Il assure JSL Code
-                    qu’il est titulaire de tous les droits de propriété intellectuelle sur l’intégralité des pages qu’il
-                    fait héberger, c’est à dire des droits de reproduction, de représentation et de diffusion relatifs
-                    au support Internet, pour une durée préalablement déterminée. Le client agit en tant qu’entité
-                    indépendante et assume en conséquence seul les risques et périls de son activité. Le client est seul
-                    responsable des services et de son site Internet, du contenu des informations transmises, diffusées
-                    ou collectées, de leur exploitation et de leur mise à jour, ainsi que tous les fichiers, notamment
-                    fichiers d’adresses. Le client s’engage à respecter les droits d’auteur, droits sur les brevets ou
-                    sur les marques. En conséquence, JSL Code ne saurait être tenue pour responsable du contenu des
-                    informations transmises, diffusées ou collectées, de leur exploitation et de leur mise à jour, ainsi
-                    que de tous fichiers, notamment fichiers d’adresses et ce, à quelque titre que ce soit. Le client
-                    déclare en conséquence accepter pleinement toutes les obligations légales découlant de la propriété
-                    de ses services, JSL Code ne pouvant être recherchée ni inquiétée à cet égard pour quelque cause que
-                    ce soit, notamment en cas de violation de lois ou règlements applicables aux services du client. Le
-                    client déclare avoir obtenu toutes les autorisations nécessaires en matière de droits d’auteur,
-                    notamment auprès des sociétés de répartition de droits d’auteur qui seraient requises. Le client
-                    s’engage à faire figurer sur les pages web de son site Internet l’identité et l’adresse du
-                    propriétaire ou de l’auteur des pages web et à effectuer toutes les demandes nécessaires à la
-                    création de son site web, conformément à la loi française en vigueur. Le non-respect par le client
-                    des points visés ci-dessus, que ce soit pour le site hébergé sur l’infrastructure serveurs de JSL
-                    Code ou que cela concerne une redirection de son domaine vers ce type de sites, et notamment toute
-                    activité spécifiquement interdite à partir des serveurs de JSL Code et/ou tout contenu diffusé
-                    spécifiquement interdits sur les serveurs de JSL Code et/ou susceptible d’engendrer une
-                    responsabilité civile et/ou pénale et/ou susceptible de porter atteinte aux droits d’un tiers
-                    entraînera le droit pour JSL Code d’interrompre sans délai et sans mise en demeure préalable les
-                    services du client et de résilier immédiatement et de plein droit le contrat, sans préjudice du
-                    droit à tous dommages-intérêts auxquels JSL Code pourrait prétendre. Dans ces hypothèses, le client
-                    ne pourra prétendre au remboursement par JSL Code des sommes déjà versées. Le client s’engage à
-                    respecter l’ensemble des prescriptions légales et réglementaires en vigueur, et en particulier
-                    celles relatives à l’informatique, aux fichiers et aux libertés, et notamment à faire toute
-                    déclaration des traitements auprès de la Commission Nationale de l’Informatique et des Libertés
-                    (C.N.I.L.). Le client s’engage par ailleurs à prendre toutes les assurances nécessaires auprès d’un
-                    organisme notoirement solvable afin de couvrir tous les dommages qui lui seraient imputables dans le
-                    cadre du présent contrat ou de son exécution. Le client garantit relever indemne JSL Code de toute
-                    action en revendication de tiers liée au contenu des informations transmises, diffusées, reproduites
-                    notamment celles résultant d’une atteinte aux droits de la personnalité, à un droit de propriété lié
-                    à un brevet, à une marque, à des dessins et modèles, à des droits d’auteur ou celles résultant d’un
-                    acte de concurrence déloyale ou parasitaire ou d’une atteinte à l’ordre public, aux règles
-                    déontologiques régissant Internet, aux bonnes disposition du Code Pénal : à ce titre, le client
-                    indemnisera JSL Code de tous frais, charges et dépenses que celle-ci aurait à supporter de ce fait,
-                    en ce compris les honoraires et frais raisonnables des conseils de JSL Code, même par une décision
-                    de justice non définitive. Le client s’engage à régler directement à l’auteur de la réclamation
-                    toute somme que celui-ci exigerait de JSL Code. En outre, le client s’engage à intervenir sur
-                    demande de JSL Code à toute instance engagée contre cette dernière ainsi qu’à garantir à JSL Code de
-                    toutes les condamnations qui seraient prononcées contre elle à cette occasion. En conséquence, le
-                    client s’engage à faire son affaire personnelle de toute réclamation et/ou procédure quelle qu’en
-                    soit la forme, l’objet ou la nature qui serait formée contre JSL Code et qui se rattacherait aux
-                    obligations mises à la charge du client au titre du présent contrat. Le client, seul responsable du
-                    contenu du site, s’engage à assurer à ses frais la défense de JSL Code dans le cas où cette dernière
-                    ferait l’objet d’une action en revendication, relative aux données, informations, messages, etc…
-                    qu’elle diffuse, et à prendre à sa charge l’indemnité due en réparation du préjudice éventuellement
-                    subi, à condition d’avoir toute liberté pour transiger et conduire la procédure.</p>
-            <p>2. Le SPAM (courrier non sollicité) est totalement interdit Le client
-                    s’engage à ne pas se servir des fonctionnalités de la messagerie pour envoyer des messages en grand
-                    nombre (SPAM) ou à des personnes qui ne désirent pas en recevoir. A ce titre, JSL Code se réserve le
-                    droit de mettre en place sur ses serveurs des outils logiciels empêchant ces pratiques. En cas de
-                    plainte de quiconque (client ou non client) concernant un e-mail envoyé :</p>
-            <p>– à partir des installations de JSL Code</p>
-            <p>– ou comportant les URL des sites hébergés chez JSL Code.</p>
-            <p>En cas de non-respect de cet engagement, le client reconnaît que JSL Code est
-                    en droit de limiter, de restreindre, d’interrompre ou de suspendre définitivement tout ou partie du
-                    service mis en cause pendant une durée de cinq jours minimum voire rompre définitivement le contrat
-                    pour spamming.</p>
-            <p>3. Le client est le responsable entier et exclusif des mots de passe que JSL
-                    Code pourrait lui fournir ultérieurement. Toute utilisation faite par le mot de passe et
-                    l’identifiant du client sera considérée comme relevant de la responsabilité exclusive au client. Le
-                    client est seul responsable de la sécurité de ce mot de passe.</p>
-            <p>4. Le client supportera seul les conséquences du défaut de fonctionnement du
-                    serveur consécutif à toute utilisation, par les membres de son personnel ou par toute personne
-                    auquel le client aura fourni son ou ses mots de passe, non conforme aux instructions de
-                    fonctionnement qui lui auront été fournies par JSL Code. De même, le client supporte seul les
-                    conséquences de la perte du ou des mots de passe précités.</p>
-            <p>5. Le client s’engage à informer JSL Code de toute modification concernant sa
-                    situation (notamment, changement d’adresse, électronique ou autre, modification de son équipement…)
-                    au plus tard dans le mois de ce changement, sauf pour le changement de l’adresse de la messagerie,
-                    dont la modification devra être transmise dans les 48 heures à compter de son utilisation. A défaut
-                    de respect de ce délai, ou à défaut d’informer JSL Code de ce changement, JSL Code dégagera sa
-                    responsabilité de toute interruption de service qui toucherait les prestations acquises par le
-                    client suite à un défaut d’information.</p>
-            <p>6. Le client s’engage à conserver une copie des données transmises.
-            </p>
-            <p>7. Le client s’engage à conserver l’entière propriété de son compte. Par
-                    conséquent, il ne peut en aucun vendre ou céder tout ou partie de ce dernier à un tiers.</p>
-            <p></p>
-            <h3><b>ARTICLE 10 : NOMS DE DOMAINE</b></h3>
-            
-            <p>Sur commande du client, JSL Code se charge pour le compte du client des
-                    formalités d’enregistrement du nom de domaine choisi. A cet effet, le client devra fournir à JSL
-                    Code, sur simple demande, tous les documents et informations nécessaires à cette démarche. JSL Code
-                    rapportera au client toute difficulté éventuellement rencontrée pour l’enregistrement du nom de
-                    domaine souhaité. En tout état de cause, JSL Code ne s’engage pas sur l’obtention du nom de domaine
-                    choisi par le client dans la mesure où cette décision appartient à ses fournisseurs. Le client est
-                    seul responsable du choix du nom de domaine et vérifiera que le nom choisi ne porte pas atteinte aux
-                    droits d’un tiers. Le dépôt fait par JSL Code se fait pour le compte du client. En conséquence, le
-                    nom de domaine enregistré par le client est sous sa garde exclusive et il lui appartient de
-                    s’assurer du renouvellement de ce nom de domaine en temps utile.JSL Code est un simple intermédiaire
-                    technique agissant pour le compte du client. Le client reconnaît que la prestation de JSL Code
-                    consiste seulement en une inclusion dans la base de données partagées des noms de domaine, du nom de
-                    domaine que le client choisit, pendant la durée du présent contrat et sous réserve, notamment, que
-                    le nom de domaine soit disponible et que le client respecte les termes des présentes conditions
-                    contractuelles.</p>
-            <p></p>
-            <h3><b>ARTICLE 11 : ADRESSES E-MAIL</b></h3>
-            
-            <p>JSL Code met à la disposition du client des adresses email, des alias email
-                    et des redirections d’e-mails dont le nombre est défini dans la formule choisie par le client. Le
-                    client pourra choisir ses adresses dans la mesure où elles sont disponibles et acceptées par JSL
-                    Code . JSL Code se réserve le droit, à tout moment et sans préavis de supprimer une ou l’ensemble
-                    des adresses emails, alias et redirections, s’il estime que l’usage qui en est fait n’est pas
-                    conforme à la netiquette. Certaines adresses techniques sont réservées. L’installation et la
-                    configuration des «boites mail», ainsi que la gestion, la consultation et la suppression des
-                    messages reçus sont du ressort du client. JSL Code ne peut être tenue responsable des conséquences
-                    de la saturation de la ou des boites mail du client.</p>
-            <p></p>
-            <h3><b>ARTICLE 12 : DURÉE DU CONTRAT</b></h3>
-            
-            <p>Le contrat est conclu pour un durée d’un an qui commence à courir à compter
-                    de l’acceptation par le client du devis correspondant. Le présent contrat est renouvelable par
-                    tacite reconduction, pour une durée identique à celle fixée lors de sa conclusion, selon les tarifs
-                    et conditions de JSL Code à la date de son renouvellement, sauf dénonciation par l’une des parties
-                    dans les conditions décrites ci-après.</p>
-            <p></p>
-            <h3><b>ARTICLE 13 : TARIFS, PAIEMENT, DÉLAI DE PAIEMENT ET DE RENOUVELLEMENT</b>
-            </h3>
-            
-            <p><b>Tarifs</b><br>Les prix des services fournis par JSL Code au titre
-                    du contrat de prestations de services de JSL Code font l’objet de plusieurs tarifs établis en
-                    fonction de la nature des prestations fournies. Les tarifs en vigueur sont disponibles sur demande
-                    auprès de JSL Code. Les abonnements et prestations proposés sont mentionnés sur le devis accepté par
-                    le client ; ils s’entendent toutes taxes comprises et sont payables en euros d’avance par paiement
-                    mensuel ou annuel selon l’option retenue par le client. JSL Code se réserve la faculté de modifier
-                    ses prix à tout moment, sous réserve d’en informer le client par courrier électronique ou par un
-                    avertissement en ligne sur le site JSL Code.fr un mois à l’avance si les nouveaux tarifs sont moins
-                    favorables au client. Suite à cette information le client sera libre de résilier le contrat, dans
-                    les conditions précisées dans l’article 15. A défaut, le client sera réputé avoir accepté les
-                    nouveaux tarifs. Les modifications de tarifs seront applicables à tous les contrats et notamment à
-                    ceux en cours d’exécution. JSL Code se réserve le droit de répercuter, sans délai, toute nouvelle
-                    taxe réglementaire, administrative ou légale ou toute augmentation de taux des taxes
-                    existantes.</p>
-            <p><b>Frais d’installation</b><br>Les frais d’installations pourront être
-                    facturé et le prix sera défini sur la facture.</p>
-            <p><b>Modalités de paiement</b><br>Les abonnements payés d’avance sont
-                    garantis pour la période concernée. Le paiement doit être fait par par chèque, à condition qu’il
-                    émane d’un établissement bancaire situé sur le territoire français, par virement bancaire, ou par
-                    carte bancaire</p>
-            <p><b>Renouvellement</b><br>En cas de renouvellement, les taxes et les
-                    tarifs applicables seront ceux en vigueur au jour du renouvellement. JSL Code notifiera le client
-                    par le biais d’ e-mails de son obligation d’acquitter le prix du renouvellement du/des
-                    hébergement(s) concerné(s). Cette notification sera adressée au contact de facturation (il est de la
-                    responsabilité du client de tenir à jour cette adresse email). A défaut de l’entier paiement du prix
-                    du renouvellement fixé dans le tarif, JSL Code ne pourra effectuer le renouvellement demandé par le
-                    client. Le client recevra un e-mail de notification de fermeture de l’hébergement à la date
-                    d’anniversaire de celui-ci. JSL Code entreprendra l’effacement de l’hébergement à J+15 jours selon
-                    la date anniversaire du renouvellement, le client recevra un e-mail de notification pour l’informer
-                    de l’effacement de l’hébergement pour défaut de paiement. Tout défaut de paiement ou paiement
-                    irrégulier, c’est à dire, notamment, d’un montant erroné, ou incomplet, ou ne comportant pas les
-                    références requises, ou effectué par un moyen ou une procédure non acceptés par JSL Code, sera
-                    purement et simplement ignoré et provoquera le rejet par JSL Code de la demande d’enregistrement, de
-                    renouvellement ou de transfert. S’agissant d’un renouvellement payé par chèque, il appartient au
-                    client de solliciter le renouvellement avec un délai suffisant de sorte que le chèque soit
-                    effectivement reçu par JSL Code 5 jours avant expiration de l’hébergement. Tout incident et/ou
-                    retard de paiement à l’échéance entraînera suspension de services. Le client est seul responsable du
-                    paiement de l’ensemble des sommes dues au titre du contrat de prestations de services de JSL
-                    Code.</p>
-            <p><b>Conséquences d’un retard de paiement</b><br>Tout impayé (annulation
-                    du paiement par carte, défaut de provision et/ou rejet par notre banque suite à un paiement par
-                    chèque…) sera considéré comme un retard de paiement. De convention expresse et sauf report sollicité
-                    à temps et accordé par JSL Code de manière particulière et écrite, le défaut total ou partiel de
-                    paiement à l’échéance de toute somme due au titre du contrat entraînera de plein droit et sans mise
-                    en demeure préalable et sans préjudice de l’article « résiliation » :</p>
-            <p>– l’exigibilité immédiate de toutes les sommes restant dues par le client,
-                    quel que soit le mode de règlement prévu.</p>
-            <p>– La possibilité de suspendre ou de résilier, si bon semble à JSL Code,
-                    l’exécution de toute commande en cours jusqu’au paiement complet des sommes dues par le
-                    client.</p>
-            <p>– L’application d’un intérêt à un taux égal à 12% sans que celui-ci ne puisse
-                    être inférieur à une fois et demi le taux de l’intérêt légal français.</p>
-            <p>– La suspension de toutes les prestations en cours, quelle que soit leur
-                    nature, sans préjudice pour JSL Code d’user de la faculté de résiliation du contrat stipulée à
-                    l’article « résiliation ».</p>
-            <p>Tout désaccord concernant la facturation et la nature des services devront
-                    être exprimés via la formulaire de contact présent sur le site JSL Code.fr ou par ticket sur votre
-                    espace client à l’adresse client.JSL Code.fr . Dans l’hypothèse où des frais seraient exposés par
-                    JSL Code, cette dernière en informera le client et lui communiquera les justificatifs et la facture
-                    correspondants. Le client pourra alors régler la somme due par chèque en euros.</p>
-            
-            <h3><b>ARTICLE 14 : DROIT DE RÉTRACTATION</b></h3>
-            
-            <p>Par dérogation à l’article L.121-20-1, 1er du Code Français de la
-                    Consommation, JSL Code accorde au client un droit de rétractation de sept jours francs à compter de
-                    la date de fourniture de services, même si l’exécution de la prestation a déjà commencé sur demande
-                    du client. Ce droit de rétractation s’effectuera par courrier recommandé avec accusé de réception et
-                    donne droit pour le client au remboursement des sommes déjà versées par lui dans un délai de trente
-                    jours à compter de la réception de l’avis. Toute demande de rétractation qui ne respecterait pas le
-                    délai légal ou les formalités de l’alinéa précédent ne sera pas prise en considération.</p>
-            <p></p>
-            <h3><b>ARTICLE 15 : RÉSILIATION, LIMITATION ET SUSPENSION DU SERVICE</b></h3>
-            
-            <p>Chaque partie peut résilier de plein droit et sans indemnité le contrat en
-                    cas de force majeure dans les conditions prévues à l’article 9 des conditions générales. Dans les
-                    autres cas, le client est libre de résilier le contrat via l’interface client. Et dans ce cas, le
-                    client ne pourra prétendre au remboursement par JSL Code des sommes déjà versées. Le non-respect par
-                    le client des stipulations de l’article 10 des présentes conditions générales d’hébergement – que ce
-                    soit pour le site hébergé sur les infrastructures de JSL Code ou que cela concerne une redirection
-                    de son domaine vers ce type de sites – et notamment toute activité spécifiquement interdite à partir
-                    des serveurs de JSL Code et/ou tout contenu diffusé spécifiquement interdit sur les serveurs de JSL
-                    Code et/ou susceptible d’engendrer une responsabilité civile et/ou pénale et/ou susceptible de
-                    porter atteinte aux droits d’un tiers, entraînera le droit pour JSL Code d’interrompre sans délai et
-                    sans mise en demeure préalable les services du client et de résilier immédiatement et de plein droit
-                    le contrat, sans préjudice du droit à tous dommages-intérêts auxquels JSL Code pourrait prétendre.
-                    Dans ces hypothèses, le client ne pourra prétendre au remboursement par JSL Code des sommes déjà
-                    versées. JSL Code pourra mettre fin au contrat par lettre recommandée avec demande d’avis de
-                    réception, sous réserve d’un préavis d’un mois. En cas de manquement par l’une des parties à l’une
-                    ou l’autre de ses obligations au titre du contrat non réparé dans un délai de sept jours à compter
-                    soit d’une lettre recommandée avec demande d’avis de réception adressée par la partie plaignante
-                    notifiant les manquements en cause, soit de toute autre forme de notification faisant foi adressée
-                    par la dite partie, le contrat sera résilié de plein droit, sans préjudice de tous dommages-intérêts
-                    éventuels qui pourraient être réclamés à la partie défaillante. La date de notification de la lettre
-                    comportant les manquements en cause sera la date du cachet de la poste, lors de la première
-                    présentation de la lettre. Si JSL Code résilie le contrat dans les conditions prévues au présent
-                    article, le client ne pourra prétendre eu remboursement par JSL Code des sommes déjà versées, et JSL
-                    Code ne sera redevable d’aucun dédommagement à l’égard du client. En revanche, si le non respect des
-                    obligations du client entraînait un préjudice pour JSL Code, JSL Code se réserve le droit de
-                    poursuivre le client pour obtenir la réparation complète de ce préjudice et notamment le
-                    remboursement de dommages-intérêts, pénalités, frais, honoraires exposés par JSL Code. Aux termes de
-                    ce contrat, quel qu’en soit le motif, JSL Code s’engage à procéder au retrait intégral des fichiers
-                    relatifs au site du client et présents sur ses serveurs. Le service est restreint, limité ou
-                    suspendu de plein droit si le paiement n’est pas effectif après relance et lettre de mise en
-                    demeure. Le service peut encore être restreint, limité ou suspendu lorsque les conditions
-                    particulières applicables à chaque type de service fourni par JSL Code prévoient cette sanction en
-                    conséquence d’un manquement. En toutes hypothèses, les mesures de restriction, limitation ou
-                    suspension sont exercées selon la gravité et la récurrence du ou des manquements. Elles sont
-                    déterminées en fonction de la nature du ou des manquements constatés. Le client comprend que JSL
-                    Code devra effectuer une restriction, limitation ou suspension de l’hébergement si JSL Code reçoit
-                    un avis à cet effet notifié par une autorité compétente, administrative, arbitrale ou judiciaire,
-                    conformément aux lois applicables appropriées.</p>
-            <p></p>
-            <h3><b>ARTICLE 16 : MODIFICATION</b></h3>
-            
-            <p>JSL Code est libre de modifier ses conditions générales et, le cas échéant,
-                    particulières de vente mais devra en informer le client au préalable.</p>
-            <p></p>
-            <h3><b>ARTICLE 17 : PUBLICITÉ ET PROMOTION</b></h3>
-            
-            <p>JSL Code pourra à l’occasion de manifestations, dans les colloques et
-                    publications spécialisées sur les marchés professionnels, se prévaloir des services fournis au
-                    client ainsi que sur ses documents commerciaux et/ou plaquettes.</p>
-            <p></p>
-            <h3><b>ARTICLE 18 : APPLICATION ET OPPOSABILITÉ DES CONDITIONS GÉNÉRALES DE VENTE DE JSL
-                        Code</b></h3>
-            
-            <p>Les présentes conditions générales sont applicables à toute prestation
-                    d’hébergement fournie par JSL Code. Le contrat prévaut sur toute plaquette, brochure commerciale,
-                    publicité ou contenu du site Internet de JSL Code, sous réserve de l’application de la clause «
-                    modification ». Le fait de passer commande implique l’adhésion entière et sans réserve du client aux
-                    présentes conditions générales d’hébergement, qui s’appliquent quelles que soient les options
-                    retenues ; l’hébergement souscrit et les modalités d’ouverture de l’hébergement. Aucune demande
-                    séparée ou modification particulière de la commande faite par le client ne peut, sauf acceptation
-                    formelle et expresse, être opposable à JSL Code, quel que soit le moment où elle aura pu être portée
-                    à la connaissance de cette dernière.</p>
-            <p></p>
-            <h3><b>ARTICLE 19 : DISPOSITIONS GÉNÉRALES</b></h3>
-            
-            <p><b>Divisibilité</b><br>Si l’une quelconque des stipulations du présent
-                    contrat s’avérait nulle au regard d’une règle de droit en vigueur ou d’une décision judiciaire
-                    devenue définitive, elle serait alors réputée non écrite, sans pour autant entraîner la nullité du
-                    contrat ni altérer la validité de ses autres dispositions. Le fait que l’une ou l’autre des parties
-                    ne revendique pas l’application d’une clause quelconque du contrat ou acquiesce à son inexécution,
-                    que ce soit de manière permanente ou temporaire, ne pourra être interprété comme une renonciation
-                    par cette partie aux droits qui découlent pour elle de la dite clause. Dans ce cas, les parties
-                    devront dans la mesure du possible remplacer la disposition annulée par une disposition valable
-                    correspondant à l’esprit et à l’objet des conditions contractuelles.</p>
-            <p><b>Intitulés</b><br>Les intitulés des articles des conditions
-                    contractuelles ont pour seul but de faciliter les références et n’ont pas par eux-mêmes, une valeur
-                    contractuelle ou une signification particulière.</p>
-            <p><b>Notifications</b><br>Toutes les notifications, communications,
-                    mises en demeure prévues par les conditions générales seront réputées avoir été valablement
-                    délivrées au client si elles sont adressées par lettre recommandée avec demande d’avis de réception
-                    :</p>
-            <p>– pour JSL Code : 8 lotissement le clos de l'hers, 31790 Saint Jory.<br>–
-                    pour le titulaire de l’hébergement : à l’adresse postale et/ou e-mail qu’il a fournie à JSL
-                    Code.</p>
-            <p></p>
-            <h3><b>ARTICLE 20 : LOI APPLICABLE ET ATTRIBUTION DE JURIDICTION</b></h3>
-            
-            <p>La loi française sera seule applicable au présent contrat, à l’exclusion,
-                    d’une part, des règles de conflit prévues par la loi française, et d’autre part, des dispositions de
-                    la loi Française qui seraient contraires au présent contrat. Tout litige entre les parties, relatif
-                    à leurs relations contractuelles et notamment à l’interprétation, l’exécution et la résiliation du
-                    présent contrat, sera soumis au tribunal de commerce de Toulouse (31) même en cas d’appel en
-                    garantie ou de pluralité de défendeurs. Le simple fait d’accepter et de signer un devis concernant
-                    une prestation d’hébergement de site internet vaudra pour acceptation pleine et entière des
-                    présentes conditions contractuelles.</p>
+                <div>
+                        <h3><b>ARTICLE 1 : OBJET</b></h3>
+                        <p>Les présentes conditions générales d’hébergement ont pour objet de définir
+                                les conditions et les modalités selon lesquelles JSL Code met à disposition de son
+                                client ses
+                                produits d’hébergement. Le fait de passer commande ou d’accepter un devis implique
+                                l’adhésion sans
+                                réserve du Client aux présentes conditions générales d’hébergement. Le Client s’engage à
+                                disposer du
+                                pouvoir, de l’autorité et de la capacité nécessaires à la conclusion et à l’exécution
+                                des
+                                obligations prévues aux présentes conditions.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 2 : DÉFINITIONS</b></h3>
+                        <p>Client : Personne physique ou morale, signataire des présentes conditions
+                                générales de vente, responsable d’un ou de plusieurs sites Internet hébergé par JSL
+                                Code.</p>
+                        <p>Espace web : Espace de stockage alloué par JSL Code à chaque client.
+                        </p>
+                        <p>Fournisseur : est appelé fournisseur dans ce présent document, JSL
+                                Code.</p>
+                        <p>Internet : ensemble de réseaux interconnectés, situés à travers le
+                                monde.</p>
+                        <p>Hébergement : Ressources techniques et moyens mis à la disposition du client
+                                lui permettant de publier et d’exploiter un ou plusieurs sites internet.</p>
+                        <p>Hébergement mutualisé : Hébergement de plusieurs ensemble de pages et
+                                d’éléments constitutifs des sites Internet propres à plusieurs clients sur un serveur
+                                commun. Ces
+                                clients partagent collectivement les ressources et l’espace disponible sur le serveur.
+                        </p>
+                        <p>Identifiants : Couple nom d’utilisateur / mot de passe permettant au client
+                                de s’identifier sur le réseau.</p>
+                        <p>Nom de domaine : Nom désignant de manière unique l’emplacement d’un site
+                                internet.</p>
+                        <p>Serveur : ordinateur maître contrôlant certains accès et certaines ressources
+                                sur le réseau.</p>
+                        <p>Netiquette : Ensemble de règles et d’usage des utilisateurs d’Internet, parmi
+                                lesquels :</p>
+                        <p>· Ne pas envoyer des courriers électroniques en masse à des personnes qui
+                                n’en ont pas fait la demande (« junkmail » ou « spam »).</p>
+                        <p>· Ne pas poster un message dans un ou plusieurs groupes de discussion, avec
+                                un contenu sans rapport avec le thème de ces groupes.</p>
+                        <p>· Respecter les droits d’auteurs.</p>
+                        <p>· Ne pas aller à l’encontre de la RFC1855.</p>
+                        <p>Whois : Outils de recherche en ligne, librement accessible sur Internet
+                                permettant l’obtention d’ informations concernant tout déposant d’un nom de domaine.</p>
+                        <p>Conditions contractuelles : Les conditions particulières et éventuelles
+                                annexes sont incorporées par référence aux conditions générales et sont indissociables
+                                des
+                                conditions générales.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 3 : RÉALISATION ET FACTURATION DES PRESTATIONS</b></h3>
+
+                        <p>JSL Code procède à l’hébergement du site Internet du client sur ses
+                                infrastructures suite à l’acceptation par le client du devis correspondant. Le contrat
+                                entre le
+                                client et JSL Code est formé au moment de la signature d’acceptation du devis par le
+                                client. Le
+                                contrat est réputé définitif dès la mise en oeuvre du service par JSL Code. En cas de
+                                litige entre
+                                les deux parties concernées, la date de mise en oeuvre sera celle relevée par le serveur
+                                de JSL
+                                Code.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 4 : MOYENS ET SUPPORT TECHNIQUE</b></h3>
+
+                        <p>L’infrastructure réseau de JSL Code est accessible pour le grand public par
+                                le réseau Internet au moyen de serveurs connectés au réseau Internet. JSL Code fournit
+                                la puissance
+                                informatique, les équipements de sécurité et les logiciels nécessaires au fonctionnement
+                                du service
+                                Internet proposé au Client, la liste de ces logiciels variant en fonction des
+                                abonnements proposés.
+                                Ces options sont décrites sur le devis signé par le client. JSL Code met à disposition
+                                un support
+                                technique disponible par téléphone et e-mail.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 5 : CONDITIONS D’EXPLOITATION</b></h3>
+
+                        <p>JSL Code s’engage à mettre en oeuvre tous ses moyens et ses compétences pour
+                                assurer la permanence, la continuité et la qualité des services qu’elle propose, et
+                                souscrit à ce
+                                titre une obligation de moyens. En conséquence, JSL Code s’efforcera d’offrir un accès
+                                internet
+                                24h/24h, 7 jours sur 7 sans qu’elle puisse pour autant le garantir, compte-tenu de la
+                                nature du
+                                réseau. Le client reconnaît par les présentes que des fluctuations de la bande passante
+                                et les aléas
+                                permanents du fournisseur d’accès sont des éléments pouvant entraîner une discontinuité
+                                dans l’accès
+                                aux serveurs, indépendante de la volonté de JSL Code et extérieure à ses moyens
+                                techniques. JSL Code
+                                garantit un accès au site par les internautes dans les conditions d’une fréquentation
+                                raisonnable.
+                                Dans l’hypothèse où le client aurait fait le choix d’une prestation non-adaptée au
+                                trafic réel de
+                                son site et que les capacités offertes en terme de bande passante et/ou de ressources
+                                serveurs par
+                                les prestataires deviendraient insuffisantes, les parties se concerteront afin
+                                d’envisager des
+                                modifications techniques et financières des conditions d’hébergement du client.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 6 : INFORMATION AU CLIENT ET CONFORMITÉ DU SERVICE</b></h3>
+
+                        <p>Le client reconnaît avoir vérifié l’adéquation du service à ses besoins et
+                                avoir reçu de JSL Code toutes les informations et conseils nécessaires pour souscrire au
+                                présent
+                                engagement en connaissance de cause.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 7 : OBLIGATION DE JSL Code</b></h3>
+
+                        <p>JSL Code s’engage à apporter tout le soin et la diligence nécessaires à la
+                                fourniture d’un service de qualité conformément aux usages de la profession et à l’état
+                                de l’art.
+                                Elle n’est soumise qu’à une obligation de moyens. Cependant, JSL Code s’engage à : •
+                                Assurer l’accès
+                                logiciel aux serveurs 24h/24 tous les jours de l’année. En cas d’absolue nécessité, JSL
+                                Code se
+                                réserve la possibilité d’interrompre les serveurs afin de procéder à une intervention
+                                technique pour
+                                en améliorer leur fonctionnement ou pour toute opération de maintenance. Dans la mesure
+                                du possible,
+                                JSL Code informera le client dans un délai raisonnable de la nature et de la durée de
+                                l’intervention, afin que le client prenne ses dispositions. • Intervenir rapidement en
+                                cas
+                                d’incident. • Assurer le maintien au meilleur niveau de la qualité de ses outils.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 8 : RESPONSABILITÉ DE JSL Code</b></h3>
+
+                        <p>En aucun cas, la responsabilité de JSL Code ne pourra être recherchée en cas
+                                de :</p>
+                        <p>• Faute, négligence, omission ou défaillance du client, non-respect des
+                                conseils donnés.</p>
+                        <p>• Divulgation ou utilisation illicite des identifiants confidentiels du
+                                client.</p>
+                        <p>• Faute, négligence ou omission d’un tiers sur lequel JSL Code n’a aucun
+                                pouvoir de contrôle et/ou de surveillance.</p>
+                        <p>• Force majeur, événement ou incident indépendant de la volonté de JSL
+                                Code,</p>
+                        <p>• Arrêt de l’hébergement pour toute cause visée à l’article 10</p>
+                        <p>• Divulgation ou utilisation illicite du mot de passe remis
+                                confidentiellement au client.</p>
+                        <p>JSL Code est responsable, selon les règles de droit civil, des services
+                                fournis au client. JSL Code s’engage à mettre tous ses moyens en oeuvre pour assurer
+                                dans des
+                                conditions optimales les services du client, sauf dans l’hypothèse où une interruption
+                                du service
+                                est expressément demandée par une autorité administrative ou juridictionnelle
+                                compétente. En outre,
+                                la responsabilité de JSL Code ne sera pas engagée pour tout cas de force majeur
+                                habituellement
+                                reconnu par les tribunaux, notamment :</p>
+                        <p>• Si l’exécution du contrat, ou de toute obligation incombant à JSL Code au
+                                titre des présentes, est empêchée, limitée ou perturbée du fait d’un incendie, d’une
+                                explosion, de
+                                défaillance des réseaux de transmission, effondrement des installations, épidémie,
+                                tremblement de
+                                terre, inondation, panne d’électricité, guerre, embargo, loi, injonction, demande ou
+                                exigence de
+                                tout gouvernement, grève, boycott, ou autre circonstance hors du contrôle raisonnable de
+                                JSL Code («
+                                cas de force majeure »), alors JSL Code, sous réserve d’une prompte notification au
+                                client, devra
+                                être dispensée de l’exécution de ses obligations dans la limite de cet empêchement,
+                                limitation ou
+                                perturbation, et le client sera de la même manière dispensé de l’exécution de ses
+                                obligations dans
+                                la mesure où les obligations de cette partie sont relatives à l’exécution ainsi
+                                empêchée, limitée ou
+                                dérangée, sous réserve que la partie ainsi affectée fasse ses meilleurs efforts pour
+                                éviter ou
+                                pallier de telles causes auront cessé ou été supprimées. La partie affectée par un cas
+                                de force
+                                majeure devra tenir l’autre partie régulièrement informée par courrier électronique de
+                                l’état, de la
+                                suppression ou du rétablissement de ce cas de force majeure. Si les effets d’un cas de
+                                force majeure
+                                devaient avoir une durée supérieure à 30 jours, le contrat pourra être résilié de plein
+                                droit à la
+                                demande de l’une ou l’autre partie, sans droit à indemnité de part et d’autre.</p>
+                        <p>• Sont du fait du client, notamment dans les cas ci-après :</p>
+                        <p>– Détérioration de l’application,</p>
+                        <p>– Mauvaise utilisation des terminaux par le client ou par sa
+                                clientèle,</p>
+                        <p>– Destruction partielle ou totale des informations transmises ou stockées à
+                                la suite d’erreurs imputables directement ou indirectement au client. JSL Code ne pourra
+                                être tenue
+                                responsable envers le client de l’introduction d’un virus informatique dans le serveur
+                                Web ou dans
+                                le site ayant un effet sur son bon fonctionnement, de la migration du site dans un
+                                environnement
+                                matériel ou logiciel différent, des modifications apportés aux composants logiciels par
+                                une personne
+                                autre qu’une personne de JSL Code, d’une baisse du chiffre d’affaire consécutive au
+                                fonctionnement
+                                ou à l’absence de fonctionnement, ou à l’utilisation du site ou des informations s’y
+                                trouvant ou
+                                devant s’y trouver, d’intrusion illégale ou non autorisée de tout tiers dans le serveur
+                                Web ou dans
+                                le site, d’un encombrement temporaire de la bande passante d’une interruption du service
+                                de
+                                connexion à Internet pour une cause hors contrôle du concepteur. JSL Code ne pourra être
+                                tenue
+                                responsable du contenu des informations, du son, du texte, des images, des éléments de
+                                forme, des
+                                éléments multimédias, et données accessibles sur le site, transmises ou mises en ligne
+                                par le client
+                                et ce à quelque titre que ce soit. JSL Code ne saurait pas être tenue pour responsable
+                                du
+                                non-respect total ou partiel d’une obligation et/ou défaillance des prestataires de
+                                transit et en
+                                particulier de son ou ses fournisseurs d’accès. A ce titre, JSL Code informe le client
+                                que ses
+                                prestations sont indépendantes d’autres opérateurs techniques et que sa responsabilité
+                                ne peut être
+                                engagée par leur défaillance. Les réparations dues par JSL Code en cas de défaillance du
+                                service qui
+                                résulterait d’une faute établie à son encontre correspondront au préjudice direct,
+                                personnel et
+                                certain lié à la défaillance en cause, à l’exclusion expresse de tout dommage indirect.
+                        </p>
+                        <p>En aucun cas, JSL Code ne pourra être tenue responsable des préjudices
+                                indirects, c’est à dire tous ceux qui ne résultent pas directement et exclusivement de
+                                la
+                                défaillance partielle ou totale du service fourni par JSL Code, tels que préjudice
+                                commercial, perte
+                                de commandes, atteinte à l’image de la marque, trouble commercial quelconque, perte de
+                                bénéfices ou
+                                de clients, pour lesquels le client sera son propre assureur ou pourra contracter les
+                                assurances
+                                appropriées. Toute action dirigée contre le client par un tiers constitue un préjudice
+                                indirect et
+                                par conséquent, n’ouvre pas droit à réparation. En tout état de cause, le montant des
+                                dommages-intérêts qui pourraient être mis à la charge de JSL Code, si sa responsabilité
+                                était
+                                engagée, sera limité au montant des sommes effectivement versées par le client à JSL
+                                Code pour la
+                                période considérée ou facturées au client par JSL Code ou au montant des sommes
+                                correspondant au
+                                prix de la prestation, pour la part du service pour laquelle la responsabilité de JSL
+                                Code a été
+                                retenue. Sera pris en considération le montant le plus faible de ces sommes. JSL Code
+                                effectue des
+                                sauvegardes des données hébergées dans le seul but d’une reprise sur incident. Il
+                                appartient en
+                                conséquence au client de prendre toutes mesures nécessaires à la sauvegarde de ses
+                                données en cas de
+                                perte, ou de détérioration des données confiées, quelle qu’en soit la cause, y compris
+                                celle non
+                                expressément sollicitée par le client et spécialement facturée. Pour certaines
+                                prestations, le
+                                client dispose de sauvegardes régulières. Il lui appartient de mettre en oeuvre une
+                                mesure de
+                                sauvegarde effectuée par ses soins et de conserver lui-même toutes les données que JSL
+                                Code lui aura
+                                mis à disposition. Il en est de même pour la collecte temporaire des adresses « IP »
+                                considérée
+                                comme une mesure de sécurité interne, lesquelles adresses ne sont pas conservées par JSL
+                                Code
+                                au-delà d’un délai d’un mois. Toute réclamation ultérieure, même sur une injection
+                                judiciaire ou
+                                administrative ne pourra donc aboutir, JSL Code n’étant plus en possession de ces
+                                données non
+                                archivées. La responsabilité de JSL Code ne pourra donc pas être recherchée en cas
+                                d’éventuelle
+                                carence dans la mise en oeuvre des mesures de sécurité, notamment de sauvegarde.
+                                Cependant, si la
+                                responsabilité de JSL Code devait être relevée par une autorité judiciaire, elle ne
+                                pourrait être
+                                supérieure à un montant égal au montant des prestations facturées au client pour la
+                                période des 12
+                                derniers mois.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 9 : OBLIGATIONS ET RESPONSABILITÉ DU CLIENT</b></h3>
+
+                        <p>1. Le client s’engage à ne pas héberger de sites racistes ou illégaux et ceux
+                                ayant des liens hypertextes vers ce type de sites sont interdits sur les serveurs de JSL
+                                Code. De
+                                même, il s’interdit à tout hébergement de site sur des pages ayant trait à tout
+                                prosélytisme relatif
+                                à des mouvements sectaires tels que dénoncés sur le rapport parlementaire « les sectes
+                                en France »,
+                                ou considérés comme représentant un risque sectaire pour les services de l’État, ou
+                                reconnus comme
+                                tels par une décision de Justice ayant autorité de la chose jugée. Il s’engage également
+                                à ne pas
+                                faire de redirection de son domaine vers ce type de sites. Le client s’engage à ne pas
+                                mettre à
+                                disposition du public, à partir de son site hébergé sur les serveurs de JSL Code, de
+                                fichiers
+                                multimédias dont il ne possède pas les droits. Il s’engage également à ne pas inclure
+                                sur son site
+                                de liens hypertextes et à ne pas faire de redirection de son domaine vers des sites
+                                diffusant ce
+                                type de service. Le client est responsable du respect du volume de trafic et de l’espace
+                                de stockage
+                                autorisé par la formule d’hébergement et options auxquelles il a souscrit. Le client est
+                                informé que
+                                les publications constituent notamment l’oeuvre de l’esprit protégées par les droits
+                                d’auteurs au
+                                sens de l’article L 112-2 1er et 2ème du Code de la Propriété Intellectuelle. Il assure
+                                JSL Code
+                                qu’il est titulaire de tous les droits de propriété intellectuelle sur l’intégralité des
+                                pages qu’il
+                                fait héberger, c’est à dire des droits de reproduction, de représentation et de
+                                diffusion relatifs
+                                au support Internet, pour une durée préalablement déterminée. Le client agit en tant
+                                qu’entité
+                                indépendante et assume en conséquence seul les risques et périls de son activité. Le
+                                client est seul
+                                responsable des services et de son site Internet, du contenu des informations
+                                transmises, diffusées
+                                ou collectées, de leur exploitation et de leur mise à jour, ainsi que tous les fichiers,
+                                notamment
+                                fichiers d’adresses. Le client s’engage à respecter les droits d’auteur, droits sur les
+                                brevets ou
+                                sur les marques. En conséquence, JSL Code ne saurait être tenue pour responsable du
+                                contenu des
+                                informations transmises, diffusées ou collectées, de leur exploitation et de leur mise à
+                                jour, ainsi
+                                que de tous fichiers, notamment fichiers d’adresses et ce, à quelque titre que ce soit.
+                                Le client
+                                déclare en conséquence accepter pleinement toutes les obligations légales découlant de
+                                la propriété
+                                de ses services, JSL Code ne pouvant être recherchée ni inquiétée à cet égard pour
+                                quelque cause que
+                                ce soit, notamment en cas de violation de lois ou règlements applicables aux services du
+                                client. Le
+                                client déclare avoir obtenu toutes les autorisations nécessaires en matière de droits
+                                d’auteur,
+                                notamment auprès des sociétés de répartition de droits d’auteur qui seraient requises.
+                                Le client
+                                s’engage à faire figurer sur les pages web de son site Internet l’identité et l’adresse
+                                du
+                                propriétaire ou de l’auteur des pages web et à effectuer toutes les demandes nécessaires
+                                à la
+                                création de son site web, conformément à la loi française en vigueur. Le non-respect par
+                                le client
+                                des points visés ci-dessus, que ce soit pour le site hébergé sur l’infrastructure
+                                serveurs de JSL
+                                Code ou que cela concerne une redirection de son domaine vers ce type de sites, et
+                                notamment toute
+                                activité spécifiquement interdite à partir des serveurs de JSL Code et/ou tout contenu
+                                diffusé
+                                spécifiquement interdits sur les serveurs de JSL Code et/ou susceptible d’engendrer une
+                                responsabilité civile et/ou pénale et/ou susceptible de porter atteinte aux droits d’un
+                                tiers
+                                entraînera le droit pour JSL Code d’interrompre sans délai et sans mise en demeure
+                                préalable les
+                                services du client et de résilier immédiatement et de plein droit le contrat, sans
+                                préjudice du
+                                droit à tous dommages-intérêts auxquels JSL Code pourrait prétendre. Dans ces
+                                hypothèses, le client
+                                ne pourra prétendre au remboursement par JSL Code des sommes déjà versées. Le client
+                                s’engage à
+                                respecter l’ensemble des prescriptions légales et réglementaires en vigueur, et en
+                                particulier
+                                celles relatives à l’informatique, aux fichiers et aux libertés, et notamment à faire
+                                toute
+                                déclaration des traitements auprès de la Commission Nationale de l’Informatique et des
+                                Libertés
+                                (C.N.I.L.). Le client s’engage par ailleurs à prendre toutes les assurances nécessaires
+                                auprès d’un
+                                organisme notoirement solvable afin de couvrir tous les dommages qui lui seraient
+                                imputables dans le
+                                cadre du présent contrat ou de son exécution. Le client garantit relever indemne JSL
+                                Code de toute
+                                action en revendication de tiers liée au contenu des informations transmises, diffusées,
+                                reproduites
+                                notamment celles résultant d’une atteinte aux droits de la personnalité, à un droit de
+                                propriété lié
+                                à un brevet, à une marque, à des dessins et modèles, à des droits d’auteur ou celles
+                                résultant d’un
+                                acte de concurrence déloyale ou parasitaire ou d’une atteinte à l’ordre public, aux
+                                règles
+                                déontologiques régissant Internet, aux bonnes disposition du Code Pénal : à ce titre, le
+                                client
+                                indemnisera JSL Code de tous frais, charges et dépenses que celle-ci aurait à supporter
+                                de ce fait,
+                                en ce compris les honoraires et frais raisonnables des conseils de JSL Code, même par
+                                une décision
+                                de justice non définitive. Le client s’engage à régler directement à l’auteur de la
+                                réclamation
+                                toute somme que celui-ci exigerait de JSL Code. En outre, le client s’engage à
+                                intervenir sur
+                                demande de JSL Code à toute instance engagée contre cette dernière ainsi qu’à garantir à
+                                JSL Code de
+                                toutes les condamnations qui seraient prononcées contre elle à cette occasion. En
+                                conséquence, le
+                                client s’engage à faire son affaire personnelle de toute réclamation et/ou procédure
+                                quelle qu’en
+                                soit la forme, l’objet ou la nature qui serait formée contre JSL Code et qui se
+                                rattacherait aux
+                                obligations mises à la charge du client au titre du présent contrat. Le client, seul
+                                responsable du
+                                contenu du site, s’engage à assurer à ses frais la défense de JSL Code dans le cas où
+                                cette dernière
+                                ferait l’objet d’une action en revendication, relative aux données, informations,
+                                messages, etc…
+                                qu’elle diffuse, et à prendre à sa charge l’indemnité due en réparation du préjudice
+                                éventuellement
+                                subi, à condition d’avoir toute liberté pour transiger et conduire la procédure.</p>
+                        <p>2. Le SPAM (courrier non sollicité) est totalement interdit Le client
+                                s’engage à ne pas se servir des fonctionnalités de la messagerie pour envoyer des
+                                messages en grand
+                                nombre (SPAM) ou à des personnes qui ne désirent pas en recevoir. A ce titre, JSL Code
+                                se réserve le
+                                droit de mettre en place sur ses serveurs des outils logiciels empêchant ces pratiques.
+                                En cas de
+                                plainte de quiconque (client ou non client) concernant un e-mail envoyé :</p>
+                        <p>– à partir des installations de JSL Code</p>
+                        <p>– ou comportant les URL des sites hébergés chez JSL Code.</p>
+                        <p>En cas de non-respect de cet engagement, le client reconnaît que JSL Code est
+                                en droit de limiter, de restreindre, d’interrompre ou de suspendre définitivement tout
+                                ou partie du
+                                service mis en cause pendant une durée de cinq jours minimum voire rompre définitivement
+                                le contrat
+                                pour spamming.</p>
+                        <p>3. Le client est le responsable entier et exclusif des mots de passe que JSL
+                                Code pourrait lui fournir ultérieurement. Toute utilisation faite par le mot de passe et
+                                l’identifiant du client sera considérée comme relevant de la responsabilité exclusive au
+                                client. Le
+                                client est seul responsable de la sécurité de ce mot de passe.</p>
+                        <p>4. Le client supportera seul les conséquences du défaut de fonctionnement du
+                                serveur consécutif à toute utilisation, par les membres de son personnel ou par toute
+                                personne
+                                auquel le client aura fourni son ou ses mots de passe, non conforme aux instructions de
+                                fonctionnement qui lui auront été fournies par JSL Code. De même, le client supporte
+                                seul les
+                                conséquences de la perte du ou des mots de passe précités.</p>
+                        <p>5. Le client s’engage à informer JSL Code de toute modification concernant sa
+                                situation (notamment, changement d’adresse, électronique ou autre, modification de son
+                                équipement…)
+                                au plus tard dans le mois de ce changement, sauf pour le changement de l’adresse de la
+                                messagerie,
+                                dont la modification devra être transmise dans les 48 heures à compter de son
+                                utilisation. A défaut
+                                de respect de ce délai, ou à défaut d’informer JSL Code de ce changement, JSL Code
+                                dégagera sa
+                                responsabilité de toute interruption de service qui toucherait les prestations acquises
+                                par le
+                                client suite à un défaut d’information.</p>
+                        <p>6. Le client s’engage à conserver une copie des données transmises.
+                        </p>
+                        <p>7. Le client s’engage à conserver l’entière propriété de son compte. Par
+                                conséquent, il ne peut en aucun vendre ou céder tout ou partie de ce dernier à un tiers.
+                        </p>
+                        <p></p>
+                        <h3><b>ARTICLE 10 : NOMS DE DOMAINE</b></h3>
+
+                        <p>Sur commande du client, JSL Code se charge pour le compte du client des
+                                formalités d’enregistrement du nom de domaine choisi. A cet effet, le client devra
+                                fournir à JSL
+                                Code, sur simple demande, tous les documents et informations nécessaires à cette
+                                démarche. JSL Code
+                                rapportera au client toute difficulté éventuellement rencontrée pour l’enregistrement du
+                                nom de
+                                domaine souhaité. En tout état de cause, JSL Code ne s’engage pas sur l’obtention du nom
+                                de domaine
+                                choisi par le client dans la mesure où cette décision appartient à ses fournisseurs. Le
+                                client est
+                                seul responsable du choix du nom de domaine et vérifiera que le nom choisi ne porte pas
+                                atteinte aux
+                                droits d’un tiers. Le dépôt fait par JSL Code se fait pour le compte du client. En
+                                conséquence, le
+                                nom de domaine enregistré par le client est sous sa garde exclusive et il lui appartient
+                                de
+                                s’assurer du renouvellement de ce nom de domaine en temps utile.JSL Code est un simple
+                                intermédiaire
+                                technique agissant pour le compte du client. Le client reconnaît que la prestation de
+                                JSL Code
+                                consiste seulement en une inclusion dans la base de données partagées des noms de
+                                domaine, du nom de
+                                domaine que le client choisit, pendant la durée du présent contrat et sous réserve,
+                                notamment, que
+                                le nom de domaine soit disponible et que le client respecte les termes des présentes
+                                conditions
+                                contractuelles.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 11 : ADRESSES E-MAIL</b></h3>
+
+                        <p>JSL Code met à la disposition du client des adresses email, des alias email
+                                et des redirections d’e-mails dont le nombre est défini dans la formule choisie par le
+                                client. Le
+                                client pourra choisir ses adresses dans la mesure où elles sont disponibles et acceptées
+                                par JSL
+                                Code . JSL Code se réserve le droit, à tout moment et sans préavis de supprimer une ou
+                                l’ensemble
+                                des adresses emails, alias et redirections, s’il estime que l’usage qui en est fait
+                                n’est pas
+                                conforme à la netiquette. Certaines adresses techniques sont réservées. L’installation
+                                et la
+                                configuration des «boites mail», ainsi que la gestion, la consultation et la suppression
+                                des
+                                messages reçus sont du ressort du client. JSL Code ne peut être tenue responsable des
+                                conséquences
+                                de la saturation de la ou des boites mail du client.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 12 : DURÉE DU CONTRAT</b></h3>
+
+                        <p>Le contrat est conclu pour un durée d’un an qui commence à courir à compter
+                                de l’acceptation par le client du devis correspondant. Le présent contrat est
+                                renouvelable par
+                                tacite reconduction, pour une durée identique à celle fixée lors de sa conclusion, selon
+                                les tarifs
+                                et conditions de JSL Code à la date de son renouvellement, sauf dénonciation par l’une
+                                des parties
+                                dans les conditions décrites ci-après.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 13 : TARIFS, PAIEMENT, DÉLAI DE PAIEMENT ET DE RENOUVELLEMENT</b>
+                        </h3>
+
+                        <p><b>Tarifs</b><br>Les prix des services fournis par JSL Code au titre
+                                du contrat de prestations de services de JSL Code font l’objet de plusieurs tarifs
+                                établis en
+                                fonction de la nature des prestations fournies. Les tarifs en vigueur sont disponibles
+                                sur demande
+                                auprès de JSL Code. Les abonnements et prestations proposés sont mentionnés sur le devis
+                                accepté par
+                                le client ; ils s’entendent toutes taxes comprises et sont payables en euros d’avance
+                                par paiement
+                                mensuel ou annuel selon l’option retenue par le client. JSL Code se réserve la faculté
+                                de modifier
+                                ses prix à tout moment, sous réserve d’en informer le client par courrier électronique
+                                ou par un
+                                avertissement en ligne sur le site JSL Code.fr un mois à l’avance si les nouveaux tarifs
+                                sont moins
+                                favorables au client. Suite à cette information le client sera libre de résilier le
+                                contrat, dans
+                                les conditions précisées dans l’article 15. A défaut, le client sera réputé avoir
+                                accepté les
+                                nouveaux tarifs. Les modifications de tarifs seront applicables à tous les contrats et
+                                notamment à
+                                ceux en cours d’exécution. JSL Code se réserve le droit de répercuter, sans délai, toute
+                                nouvelle
+                                taxe réglementaire, administrative ou légale ou toute augmentation de taux des taxes
+                                existantes.</p>
+                        <p><b>Frais d’installation</b><br>Les frais d’installations pourront être
+                                facturé et le prix sera défini sur la facture.</p>
+                        <p><b>Modalités de paiement</b><br>Les abonnements payés d’avance sont
+                                garantis pour la période concernée. Le paiement doit être fait par par chèque, à
+                                condition qu’il
+                                émane d’un établissement bancaire situé sur le territoire français, par virement
+                                bancaire, ou par
+                                carte bancaire</p>
+                        <p><b>Renouvellement</b><br>En cas de renouvellement, les taxes et les
+                                tarifs applicables seront ceux en vigueur au jour du renouvellement. JSL Code notifiera
+                                le client
+                                par le biais d’ e-mails de son obligation d’acquitter le prix du renouvellement du/des
+                                hébergement(s) concerné(s). Cette notification sera adressée au contact de facturation
+                                (il est de la
+                                responsabilité du client de tenir à jour cette adresse email). A défaut de l’entier
+                                paiement du prix
+                                du renouvellement fixé dans le tarif, JSL Code ne pourra effectuer le renouvellement
+                                demandé par le
+                                client. Le client recevra un e-mail de notification de fermeture de l’hébergement à la
+                                date
+                                d’anniversaire de celui-ci. JSL Code entreprendra l’effacement de l’hébergement à J+15
+                                jours selon
+                                la date anniversaire du renouvellement, le client recevra un e-mail de notification pour
+                                l’informer
+                                de l’effacement de l’hébergement pour défaut de paiement. Tout défaut de paiement ou
+                                paiement
+                                irrégulier, c’est à dire, notamment, d’un montant erroné, ou incomplet, ou ne comportant
+                                pas les
+                                références requises, ou effectué par un moyen ou une procédure non acceptés par JSL
+                                Code, sera
+                                purement et simplement ignoré et provoquera le rejet par JSL Code de la demande
+                                d’enregistrement, de
+                                renouvellement ou de transfert. S’agissant d’un renouvellement payé par chèque, il
+                                appartient au
+                                client de solliciter le renouvellement avec un délai suffisant de sorte que le chèque
+                                soit
+                                effectivement reçu par JSL Code 5 jours avant expiration de l’hébergement. Tout incident
+                                et/ou
+                                retard de paiement à l’échéance entraînera suspension de services. Le client est seul
+                                responsable du
+                                paiement de l’ensemble des sommes dues au titre du contrat de prestations de services de
+                                JSL
+                                Code.</p>
+                        <p><b>Conséquences d’un retard de paiement</b><br>Tout impayé (annulation
+                                du paiement par carte, défaut de provision et/ou rejet par notre banque suite à un
+                                paiement par
+                                chèque…) sera considéré comme un retard de paiement. De convention expresse et sauf
+                                report sollicité
+                                à temps et accordé par JSL Code de manière particulière et écrite, le défaut total ou
+                                partiel de
+                                paiement à l’échéance de toute somme due au titre du contrat entraînera de plein droit
+                                et sans mise
+                                en demeure préalable et sans préjudice de l’article « résiliation » :</p>
+                        <p>– l’exigibilité immédiate de toutes les sommes restant dues par le client,
+                                quel que soit le mode de règlement prévu.</p>
+                        <p>– La possibilité de suspendre ou de résilier, si bon semble à JSL Code,
+                                l’exécution de toute commande en cours jusqu’au paiement complet des sommes dues par le
+                                client.</p>
+                        <p>– L’application d’un intérêt à un taux égal à 12% sans que celui-ci ne puisse
+                                être inférieur à une fois et demi le taux de l’intérêt légal français.</p>
+                        <p>– La suspension de toutes les prestations en cours, quelle que soit leur
+                                nature, sans préjudice pour JSL Code d’user de la faculté de résiliation du contrat
+                                stipulée à
+                                l’article « résiliation ».</p>
+                        <p>Tout désaccord concernant la facturation et la nature des services devront
+                                être exprimés via la formulaire de contact présent sur le site JSL Code.fr ou par ticket
+                                sur votre
+                                espace client à l’adresse client.JSL Code.fr . Dans l’hypothèse où des frais seraient
+                                exposés par
+                                JSL Code, cette dernière en informera le client et lui communiquera les justificatifs et
+                                la facture
+                                correspondants. Le client pourra alors régler la somme due par chèque en euros.</p>
+
+                        <h3><b>ARTICLE 14 : DROIT DE RÉTRACTATION</b></h3>
+
+                        <p>Par dérogation à l’article L.121-20-1, 1er du Code Français de la
+                                Consommation, JSL Code accorde au client un droit de rétractation de sept jours francs à
+                                compter de
+                                la date de fourniture de services, même si l’exécution de la prestation a déjà commencé
+                                sur demande
+                                du client. Ce droit de rétractation s’effectuera par courrier recommandé avec accusé de
+                                réception et
+                                donne droit pour le client au remboursement des sommes déjà versées par lui dans un
+                                délai de trente
+                                jours à compter de la réception de l’avis. Toute demande de rétractation qui ne
+                                respecterait pas le
+                                délai légal ou les formalités de l’alinéa précédent ne sera pas prise en considération.
+                        </p>
+                        <p></p>
+                        <h3><b>ARTICLE 15 : RÉSILIATION, LIMITATION ET SUSPENSION DU SERVICE</b></h3>
+
+                        <p>Chaque partie peut résilier de plein droit et sans indemnité le contrat en
+                                cas de force majeure dans les conditions prévues à l’article 9 des conditions générales.
+                                Dans les
+                                autres cas, le client est libre de résilier le contrat via l’interface client. Et dans
+                                ce cas, le
+                                client ne pourra prétendre au remboursement par JSL Code des sommes déjà versées. Le
+                                non-respect par
+                                le client des stipulations de l’article 10 des présentes conditions générales
+                                d’hébergement – que ce
+                                soit pour le site hébergé sur les infrastructures de JSL Code ou que cela concerne une
+                                redirection
+                                de son domaine vers ce type de sites – et notamment toute activité spécifiquement
+                                interdite à partir
+                                des serveurs de JSL Code et/ou tout contenu diffusé spécifiquement interdit sur les
+                                serveurs de JSL
+                                Code et/ou susceptible d’engendrer une responsabilité civile et/ou pénale et/ou
+                                susceptible de
+                                porter atteinte aux droits d’un tiers, entraînera le droit pour JSL Code d’interrompre
+                                sans délai et
+                                sans mise en demeure préalable les services du client et de résilier immédiatement et de
+                                plein droit
+                                le contrat, sans préjudice du droit à tous dommages-intérêts auxquels JSL Code pourrait
+                                prétendre.
+                                Dans ces hypothèses, le client ne pourra prétendre au remboursement par JSL Code des
+                                sommes déjà
+                                versées. JSL Code pourra mettre fin au contrat par lettre recommandée avec demande
+                                d’avis de
+                                réception, sous réserve d’un préavis d’un mois. En cas de manquement par l’une des
+                                parties à l’une
+                                ou l’autre de ses obligations au titre du contrat non réparé dans un délai de sept jours
+                                à compter
+                                soit d’une lettre recommandée avec demande d’avis de réception adressée par la partie
+                                plaignante
+                                notifiant les manquements en cause, soit de toute autre forme de notification faisant
+                                foi adressée
+                                par la dite partie, le contrat sera résilié de plein droit, sans préjudice de tous
+                                dommages-intérêts
+                                éventuels qui pourraient être réclamés à la partie défaillante. La date de notification
+                                de la lettre
+                                comportant les manquements en cause sera la date du cachet de la poste, lors de la
+                                première
+                                présentation de la lettre. Si JSL Code résilie le contrat dans les conditions prévues au
+                                présent
+                                article, le client ne pourra prétendre eu remboursement par JSL Code des sommes déjà
+                                versées, et JSL
+                                Code ne sera redevable d’aucun dédommagement à l’égard du client. En revanche, si le non
+                                respect des
+                                obligations du client entraînait un préjudice pour JSL Code, JSL Code se réserve le
+                                droit de
+                                poursuivre le client pour obtenir la réparation complète de ce préjudice et notamment le
+                                remboursement de dommages-intérêts, pénalités, frais, honoraires exposés par JSL Code.
+                                Aux termes de
+                                ce contrat, quel qu’en soit le motif, JSL Code s’engage à procéder au retrait intégral
+                                des fichiers
+                                relatifs au site du client et présents sur ses serveurs. Le service est restreint,
+                                limité ou
+                                suspendu de plein droit si le paiement n’est pas effectif après relance et lettre de
+                                mise en
+                                demeure. Le service peut encore être restreint, limité ou suspendu lorsque les
+                                conditions
+                                particulières applicables à chaque type de service fourni par JSL Code prévoient cette
+                                sanction en
+                                conséquence d’un manquement. En toutes hypothèses, les mesures de restriction,
+                                limitation ou
+                                suspension sont exercées selon la gravité et la récurrence du ou des manquements. Elles
+                                sont
+                                déterminées en fonction de la nature du ou des manquements constatés. Le client comprend
+                                que JSL
+                                Code devra effectuer une restriction, limitation ou suspension de l’hébergement si JSL
+                                Code reçoit
+                                un avis à cet effet notifié par une autorité compétente, administrative, arbitrale ou
+                                judiciaire,
+                                conformément aux lois applicables appropriées.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 16 : MODIFICATION</b></h3>
+
+                        <p>JSL Code est libre de modifier ses conditions générales et, le cas échéant,
+                                particulières de vente mais devra en informer le client au préalable.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 17 : PUBLICITÉ ET PROMOTION</b></h3>
+
+                        <p>JSL Code pourra à l’occasion de manifestations, dans les colloques et
+                                publications spécialisées sur les marchés professionnels, se prévaloir des services
+                                fournis au
+                                client ainsi que sur ses documents commerciaux et/ou plaquettes.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 18 : APPLICATION ET OPPOSABILITÉ DES CONDITIONS GÉNÉRALES DE VENTE DE JSL
+                                        Code</b></h3>
+
+                        <p>Les présentes conditions générales sont applicables à toute prestation
+                                d’hébergement fournie par JSL Code. Le contrat prévaut sur toute plaquette, brochure
+                                commerciale,
+                                publicité ou contenu du site Internet de JSL Code, sous réserve de l’application de la
+                                clause «
+                                modification ». Le fait de passer commande implique l’adhésion entière et sans réserve
+                                du client aux
+                                présentes conditions générales d’hébergement, qui s’appliquent quelles que soient les
+                                options
+                                retenues ; l’hébergement souscrit et les modalités d’ouverture de l’hébergement. Aucune
+                                demande
+                                séparée ou modification particulière de la commande faite par le client ne peut, sauf
+                                acceptation
+                                formelle et expresse, être opposable à JSL Code, quel que soit le moment où elle aura pu
+                                être portée
+                                à la connaissance de cette dernière.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 19 : DISPOSITIONS GÉNÉRALES</b></h3>
+
+                        <p><b>Divisibilité</b><br>Si l’une quelconque des stipulations du présent
+                                contrat s’avérait nulle au regard d’une règle de droit en vigueur ou d’une décision
+                                judiciaire
+                                devenue définitive, elle serait alors réputée non écrite, sans pour autant entraîner la
+                                nullité du
+                                contrat ni altérer la validité de ses autres dispositions. Le fait que l’une ou l’autre
+                                des parties
+                                ne revendique pas l’application d’une clause quelconque du contrat ou acquiesce à son
+                                inexécution,
+                                que ce soit de manière permanente ou temporaire, ne pourra être interprété comme une
+                                renonciation
+                                par cette partie aux droits qui découlent pour elle de la dite clause. Dans ce cas, les
+                                parties
+                                devront dans la mesure du possible remplacer la disposition annulée par une disposition
+                                valable
+                                correspondant à l’esprit et à l’objet des conditions contractuelles.</p>
+                        <p><b>Intitulés</b><br>Les intitulés des articles des conditions
+                                contractuelles ont pour seul but de faciliter les références et n’ont pas par eux-mêmes,
+                                une valeur
+                                contractuelle ou une signification particulière.</p>
+                        <p><b>Notifications</b><br>Toutes les notifications, communications,
+                                mises en demeure prévues par les conditions générales seront réputées avoir été
+                                valablement
+                                délivrées au client si elles sont adressées par lettre recommandée avec demande d’avis
+                                de réception
+                                :</p>
+                        <p>– pour JSL Code : 1250 route de Bouloc, 31620 Villeneuve-Les-Bouloc.<br>–
+                                pour le titulaire de l’hébergement : à l’adresse postale et/ou e-mail qu’il a fournie à
+                                JSL
+                                Code.</p>
+                        <p></p>
+                        <h3><b>ARTICLE 20 : LOI APPLICABLE ET ATTRIBUTION DE JURIDICTION</b></h3>
+
+                        <p>La loi française sera seule applicable au présent contrat, à l’exclusion,
+                                d’une part, des règles de conflit prévues par la loi française, et d’autre part, des
+                                dispositions de
+                                la loi Française qui seraient contraires au présent contrat. Tout litige entre les
+                                parties, relatif
+                                à leurs relations contractuelles et notamment à l’interprétation, l’exécution et la
+                                résiliation du
+                                présent contrat, sera soumis au tribunal de commerce de Toulouse (31) même en cas
+                                d’appel en
+                                garantie ou de pluralité de défendeurs. Le simple fait d’accepter et de signer un devis
+                                concernant
+                                une prestation d’hébergement de site internet vaudra pour acceptation pleine et entière
+                                des
+                                présentes conditions contractuelles.</p>
+                </div>
+        </section>
+        <div id='scroll_to_top' class='opacity'>
+                <img src="../images/scrolltop.png" alt="Retourner en haut">
         </div>
-    </section>
-    <div id='scroll_to_top' class='opacity'>
-        <img src="../images/scrolltop.png" alt="Retourner en haut">
-    </div>
-    <footer>
-        <div class="container">
-            © JSL Code
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="cgv.html">CGV</a></li>
-                <li><a href="mentions_legales.html">Mentions légales</a></li>
-            </ul>
-        </div>
-    </footer>
+        <footer>
+                <div class="container">
+                        © JSL Code
+                        <ul>
+                                <li><a href="../index.html">Accueil</a></li>
+                                <li><a href="cgv.html">CGV</a></li>
+                                <li><a href="mentions_legales.html">Mentions légales</a></li>
+                        </ul>
+                </div>
+        </footer>
 
 
 </body>

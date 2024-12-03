@@ -43,6 +43,14 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-182384790-1');
+
+        // Ajout de l'année dynamique
+        document.addEventListener("DOMContentLoaded", function () {
+            const yearElement = document.getElementById("current-year");
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
     </script>
     <title>JSL CODE</title>
 </head>
@@ -66,7 +74,7 @@
         <div id="skills-grille" class="container">
             <div class="skills">
                 <i class="fab fa-safari"></i>
-                <h3>Dévéloppement Web</h3>
+                <h3>Développement Web</h3>
                 <p>Du début à la fin, un site Web performant.</p>
             </div>
             <div class="skills">
@@ -87,8 +95,9 @@
                     <div class="wrap">
                         <i class="fas fa-trophy"></i>
                         <h3>Formation</h3>
-                        <p>LPlusieurs certifications d'école en ligne et Bootcamps (Formation professionnelle
-                            intensive).
+                        <p><a href="https://believemy.com/certifications/917327756862833">Certification</a> de formation
+                            "Le
+                            programme ROCKET" de l'École en ligne <a href="https://believemy.com/">Believemy.</a></br>
                             Mais avant tout autodidacte et passionné.</p>
                     </div>
                 </div>
@@ -106,19 +115,22 @@
                 <div class="progress-card">
                     <h5>Conception Web</h5>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 70%;">HTML5, CSS3, JS, PHP...</div>
+                        <div class="progress-bar" role="progressbar" style="width: 90%;">REACT, Next JS, Tailwind CSS,
+                            Firebase...</div>
                     </div>
                     <h5>CMS</h5>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 88%;">WordPress, Elementor, WooCommerce...</div>
+                        <div class="progress-bar" role="progressbar" style="width: 75%;">WordPress, Elementor,
+                            WooCommerce...</div>
                     </div>
                     <h5>Web Design</h5>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 63%;">UI/UX Design, Mockup, Logo...</div>
+                        <div class="progress-bar" role="progressbar" style="width: 63%;">UI/UX Design, Mockup, Logo...
+                        </div>
                     </div>
                     <h5>Applications Mobiles</h5>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 25%;" >XCode...</div>
+                        <div class="progress-bar" role="progressbar" style="width: 25%;">XCode...</div>
                     </div>
                 </div>
             </div>
@@ -130,7 +142,7 @@
             <i class="fab fa-php"></i>
             <i class="fab fa-vuejs"></i>
             <i class="fab fa-node"></i>
-            <i class="fab fa-git-alt"></i>
+            <i class="fab fa-react"></i>
             <i class="fab fa-github"></i>
             <i class="fab fa-codepen"></i>
             <i class="fab fa-wordpress"></i>
@@ -180,27 +192,88 @@
                     <div class="projet projet-f">
                     </div>
                 </a>
+                <a href="https://juliensl31.github.io/TwitterClone/">
+                    <h3>Twitter Clone</h3>
+                    <div class="projet projet-g">
+                    </div>
+                </a>
+                <a href="https://cineverse-78d77.web.app/">
+                    <h3>CineVerse</h3>
+                    <div class="projet projet-h">
+                    </div>
+                </a>
             </div>
         </div>
     </section>
     <section id="section">
         <div id="temoignage" class="container">
             <h2>Témoignages</h2>
-            <p>" Quels talents! Avec un « s » parce qu’ils sont nombreux! Julien a su cibler d’emblée nos attentes
-                pour
-                la création de notre site. Professionnalisme, créativité, fort de propositions, il a mené sa mission
-                avec brio et tout cela avec une grande patience. Une très belle vitrine, pour notre entreprise
-                fraîchement créée, que nous sommes fiers de mettre en avant dans nos communications! Un grand
-                Merci."
-            </p>
-            <div class="temoignage-details">
-                <div class="temoignage-photo">
-                    <img src="images/19-150x150.jpg" alt="photo de profil">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p>" Quels talents! Avec un « s » parce qu’ils sont nombreux!</br> Julien a su cibler d’emblée
+                            nos
+                            attentes
+                            pour
+                            la création de notre site. Professionnalisme, créativité, fort de propositions, il a mené sa
+                            mission
+                            avec brio et tout cela avec une grande patience. Une très belle vitrine, pour notre
+                            entreprise
+                            fraîchement créée, que nous sommes fiers de mettre en avant dans nos communications! Un
+                            grand
+                            Merci."
+                        </p>
+                        <div class="temoignage-details">
+                            <div class="temoignage-photo">
+                                <img src="images/19-150x150.jpg" alt="photo de profil" class="img-fluid rounded-circle">
+                            </div>
+                            <div class="temoignage-nom">
+                                <div class="temoignage-prenom">Sylvia</div>
+                                <div class="temoignage-job">Flow Events</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <p>" Ton projet est tout simplement bluffant.</br> Je dis ça rarement,
+                            mais là, je suis épaté par la
+                            qualité de ce que tu proposes : les animations sont parfaites, le design est magnifique
+                            jusqu'au
+                            flou du header que l'on peut retrouver sur l'élément qui affiche les résultats pour une
+                            recherche.</br>
+                            Non seulement c'est un projet complet, mais c'est une superbe plateforme, belle visuellement
+                            et très utile ! </br>Ton code reflète une vraie maturité dans la gestion des concepts
+                            avancés. Cela
+                            montre une réflexion à la fois technique et stratégique.
+                            Le soin apporté au détail, comme l’utilisation de composants bien séparés et d’une logique
+                            métier claire, est à saluer.</br>C'est à ce jour l'un des meilleurs projets que j'ai pu
+                            avoir
+                            la
+                            chance
+                            d'analyser sur Rocket. 👏"
+                        </p>
+                        <div class="temoignage-details">
+                            <div class="temoignage-photo">
+                                <img src="images/Louis-Nicolas.webp" alt="photo de profil"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                            <div class="temoignage-nom">
+                                <div class="temoignage-prenom">Louis-Nicolas Leuillet</div>
+                                <div class="temoignage-job">Fondateur Believemy</div>
+                                <a href="https://believemy.com/">Believemy</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="temoignage-nom">
-                    <div class="temoignage-prenom">Sylvia</div>
-                    <div class="temoignage-job">Flow Events</div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
             </div>
         </div>
     </section>
@@ -221,7 +294,7 @@
     </div>
     <footer>
         <div class="container">
-            © JSL Code
+            © <span id="current-year"></span> JSL Code | Tous droits réservés
             <ul>
                 <li><a href="CG/cgv.html">CGV</a></li>
                 <li><a href="CG/cgh.html">CG d'hébergement internet</a></li>
@@ -229,7 +302,6 @@
             </ul>
         </div>
     </footer>
-
 
 </body>
 
