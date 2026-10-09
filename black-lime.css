@@ -128,3 +128,5 @@ footer a:hover{color:var(--jsl-lime)}
 .credentials-note{color:var(--jsl-muted);font-size:.8rem;margin:20px 0 0}
 @media(max-width:850px){.credentials-header{grid-template-columns:1fr;gap:15px}.credentials-header>p{max-width:680px}.credential{grid-template-columns:50px minmax(0,1fr);gap:15px}.credential-tag{grid-column:2;text-align:left}}
 @media(max-width:480px){.credential{align-items:start}.credential-mark{width:42px;height:42px}.credential h3{font-size:1.2rem}.credential-tag{font-size:.62rem}}
+
+.credential-meta{display:block;margin-top:8px;font-size:.77rem;color:var(--jsl-muted)}
