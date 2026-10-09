@@ -1,0 +1,39 @@
+/* JSL Code — Soft Dark Lime palette experiment.
+   Preserves original hero and the three featured project cards. */
+:root{--soft-bg:#F1F3EF;--soft-alt:#E5EAE3;--soft-ink:#18211A;--soft-copy:#465349;--soft-line:#CBD4C8;--soft-accent:#527200;--soft-petrol:#19282C;--soft-petrol-border:#395054}
+.intro-section,.about-section{background:var(--soft-bg);color:var(--soft-ink)}
+.intro-section .section-heading h2,.intro-section .service-item h3,.about-section h2,.about-section .about-facts strong{color:var(--soft-ink)}
+.intro-section .section-heading h2 em,.about-section h2 em{color:var(--soft-accent)}
+.intro-section .section-index,.about-section .section-index,.intro-section .service-number,.intro-section .service-arrow{color:var(--soft-accent)}
+.intro-section .section-heading>p:last-child,.intro-section .service-item p:not(.service-tools),.about-section .about-copy>p{color:var(--soft-copy)}
+.intro-section .services,.intro-section .service-item,.about-section .about-facts{border-color:var(--soft-line)}
+.intro-section .service-tools{color:var(--soft-accent);opacity:1}
+.about-section .about-facts span{color:var(--soft-copy)}
+.about-section .text-link,.about-section .text-link:visited{color:var(--soft-accent)}
+.about-section .text-link:hover{color:#304800}
+.work-section{background:var(--soft-petrol);border-color:var(--soft-petrol-border)}
+.work-section .section-index{color:var(--jsl-lime)}
+.work-section .section-heading h2,.work-section .section-heading h2 em{color:var(--jsl-white)}
+.work-section .section-heading h2 em{color:var(--jsl-lime)}
+.work-section .work-heading>p{color:#D1DBD9}
+/* Featured cards, visuals, typography, composition and their project copy remain unchanged. */
+.archive-details{margin-top:55px;padding-top:26px;border-color:#4B6366}
+.archive-details summary{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #4B6366;border-radius:9px;padding:19px 22px;color:#F5F5F5;background:#22353A;font-size:1rem;transition:border-color .2s,background .2s}
+.archive-details summary:hover,.archive-details summary:focus-visible{border-color:#B6FF00;background:#2A4144}
+.archive-details summary span{color:#B6FF00}
+.archive-details[open] summary{border-color:#6A8381;border-radius:9px 9px 0 0}
+.archive-grid{gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));padding:20px;border:1px solid #4B6366;border-top:0;border-radius:0 0 9px 9px;background:#203237}
+.archive-grid a,.archive-grid a:visited{display:flex;align-items:center;gap:14px;padding:17px 18px;border:1px solid #486064;border-radius:7px;color:#DCE5E3;background:#283E42;font-size:.9rem;min-height:65px;transition:background .2s,border-color .2s}
+.archive-grid a span{color:#B6FF00;margin-left:auto}
+.archive-grid a:hover,.archive-grid a:focus-visible{color:white;border-color:#B6FF00;background:#304C4F}
+.credentials-section{background:var(--soft-alt);color:var(--soft-ink);border-color:var(--soft-line)}
+.credentials-section .section-index,.credentials-section h2 em{color:var(--soft-accent)}
+.credentials-section h2,.credentials-section .credential h3{color:var(--soft-ink)}
+.credentials-section .credentials-header>p,.credentials-section .credential p,.credentials-section .credential-meta,.credentials-section .credential-subtitle,.credentials-section .credentials-note{color:var(--soft-copy)}
+.credentials-section .credentials-list,.credentials-section .credential{border-color:var(--soft-line)}
+.credentials-section .credential-mark{background:#D8E1D2;color:var(--soft-accent);border-color:#B5C6AB}
+.credentials-section .credential-tag,.credentials-section .credential-link,.credentials-section .credential-link:visited{color:var(--soft-accent)}
+.credentials-section .credential-link:hover{color:#304800}
+.contact-section{background:#111111;border-color:#303430}
+@media(max-width:750px){.archive-grid{grid-template-columns:1fr;padding:12px}.archive-details summary{padding:16px}.archive-grid a{min-height:55px}}
+@media(prefers-reduced-motion:reduce){.archive-details summary,.archive-grid a{transition:none}}
