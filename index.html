@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/1c7b3f8009.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="images/cropped-logo-vertical-blanc-180x180.png" type="image/png" />
     <link href="styles.css" rel="stylesheet">
+    <link href="black-lime.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
@@ -53,25 +54,44 @@
             }
         });
     </script>
-    <title>JSL CODE</title>
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="JSL Code : développement web, applications et solutions numériques sur mesure. Découvrez mes réalisations.">
+    <title>JSL Code | Développement web & solutions numériques</title>
 </head>
 
 <body>
 
     <header>
         <div id="flex-header" class="container">
-            <img id="logo" src="images/logo.png" alt="logo">
+            <a class="jsl-brand" href="#accueil" aria-label="JSL Code, retour à l’accueil">JSL <span>CODE</span><b>.</b></a>
             <nav>
                 <ul>
-                    <li><a href="mailto:contact@jslcode.com">Contactez-moi</a></li>
+                    <li><a href="#expertises">Expertises</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#temoignage">Témoignages</a></li>
+                    <li><a class="nav-contact" href="mailto:contact@jslcode.com">Parlons de votre projet ↗</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section id="parallax">
+    <section id="accueil" class="jsl-hero" aria-labelledby="hero-title">
+        <div class="container jsl-hero-layout">
+            <div class="jsl-hero-copy">
+                <p class="jsl-eyebrow"><span class="jsl-dot"></span> JSL CODE / STUDIO DIGITAL INDÉPENDANT</p>
+                <h1 id="hero-title">Des idées ambitieuses.<br><span>Des solutions concrètes.</span></h1>
+                <p class="jsl-lead">Développement web, applications et solutions numériques sur mesure. Des expériences pensées pour être belles, rapides et utiles.</p>
+                <div class="jsl-hero-actions">
+                    <a class="jsl-primary" href="#realisations">Explorer mes projets <span aria-hidden="true">↗</span></a>
+                    <a class="jsl-secondary" href="mailto:contact@jslcode.com">Discutons ensemble <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <div class="jsl-art" aria-hidden="true"><div class="jsl-orbit"></div><div class="jsl-orbit jsl-orbit-2"></div><div class="jsl-monogram">J<span>/</span>S</div><span class="jsl-art-caption">BUILDING WHAT'S NEXT ↗</span></div>
+        </div>
+        <a class="jsl-scroll" href="#expertises">DÉCOUVRIR ↓</a>
     </section>
-    <section id="section">
-        <h2>compétences</h2>
+    <section id="expertises" class="jsl-section">
+        <p class="jsl-kicker">01 / MON SAVOIR-FAIRE</p>
+        <h2>Expertises</h2>
         <div id="skills-grille" class="container">
             <div class="skills">
                 <i class="fab fa-safari"></i>
@@ -154,9 +174,10 @@
         <img src="images/logo-horizontal.png" alt="logo">
     </section>
 
-    <section id="section">
+    <section id="realisations" class="jsl-section">
         <div class="container">
-            <h2>Portfolio</h2>
+            <p class="jsl-kicker">02 / PROJETS SÉLECTIONNÉS</p>
+            <h2>Réalisations</h2>
             <p class="texte-presentation">
                 Voici mes projets.
             </p>
@@ -204,7 +225,7 @@
             </div>
         </div>
     </section>
-    <section id="section">
+    <section class="jsl-section">
         <div id="temoignage" class="container">
             <h2>Témoignages</h2>
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
