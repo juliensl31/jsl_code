@@ -1,39 +1,132 @@
-/* JSL Code — Soft Dark Lime palette experiment.
-   Preserves original hero and the three featured project cards. */
-:root{--soft-bg:#F1F3EF;--soft-alt:#E5EAE3;--soft-ink:#18211A;--soft-copy:#465349;--soft-line:#CBD4C8;--soft-accent:#527200;--soft-petrol:#19282C;--soft-petrol-border:#395054}
-.intro-section,.about-section{background:var(--soft-bg);color:var(--soft-ink)}
-.intro-section .section-heading h2,.intro-section .service-item h3,.about-section h2,.about-section .about-facts strong{color:var(--soft-ink)}
-.intro-section .section-heading h2 em,.about-section h2 em{color:var(--soft-accent)}
-.intro-section .section-index,.about-section .section-index,.intro-section .service-number,.intro-section .service-arrow{color:var(--soft-accent)}
-.intro-section .section-heading>p:last-child,.intro-section .service-item p:not(.service-tools),.about-section .about-copy>p{color:var(--soft-copy)}
-.intro-section .services,.intro-section .service-item,.about-section .about-facts{border-color:var(--soft-line)}
-.intro-section .service-tools{color:var(--soft-accent);opacity:1}
-.about-section .about-facts span{color:var(--soft-copy)}
-.about-section .text-link,.about-section .text-link:visited{color:var(--soft-accent)}
-.about-section .text-link:hover{color:#304800}
-.work-section{background:var(--soft-petrol);border-color:var(--soft-petrol-border)}
-.work-section .section-index{color:var(--jsl-lime)}
-.work-section .section-heading h2,.work-section .section-heading h2 em{color:var(--jsl-white)}
-.work-section .section-heading h2 em{color:var(--jsl-lime)}
-.work-section .work-heading>p{color:#D1DBD9}
-/* Featured cards, visuals, typography, composition and their project copy remain unchanged. */
-.archive-details{margin-top:55px;padding-top:26px;border-color:#4B6366}
-.archive-details summary{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #4B6366;border-radius:9px;padding:19px 22px;color:#F5F5F5;background:#22353A;font-size:1rem;transition:border-color .2s,background .2s}
-.archive-details summary:hover,.archive-details summary:focus-visible{border-color:#B6FF00;background:#2A4144}
-.archive-details summary span{color:#B6FF00}
-.archive-details[open] summary{border-color:#6A8381;border-radius:9px 9px 0 0}
-.archive-grid{gap:12px;grid-template-columns:repeat(2,minmax(0,1fr));padding:20px;border:1px solid #4B6366;border-top:0;border-radius:0 0 9px 9px;background:#203237}
-.archive-grid a,.archive-grid a:visited{display:flex;align-items:center;gap:14px;padding:17px 18px;border:1px solid #486064;border-radius:7px;color:#DCE5E3;background:#283E42;font-size:.9rem;min-height:65px;transition:background .2s,border-color .2s}
-.archive-grid a span{color:#B6FF00;margin-left:auto}
-.archive-grid a:hover,.archive-grid a:focus-visible{color:white;border-color:#B6FF00;background:#304C4F}
-.credentials-section{background:var(--soft-alt);color:var(--soft-ink);border-color:var(--soft-line)}
-.credentials-section .section-index,.credentials-section h2 em{color:var(--soft-accent)}
-.credentials-section h2,.credentials-section .credential h3{color:var(--soft-ink)}
-.credentials-section .credentials-header>p,.credentials-section .credential p,.credentials-section .credential-meta,.credentials-section .credential-subtitle,.credentials-section .credentials-note{color:var(--soft-copy)}
-.credentials-section .credentials-list,.credentials-section .credential{border-color:var(--soft-line)}
-.credentials-section .credential-mark{background:#D8E1D2;color:var(--soft-accent);border-color:#B5C6AB}
-.credentials-section .credential-tag,.credentials-section .credential-link,.credentials-section .credential-link:visited{color:var(--soft-accent)}
-.credentials-section .credential-link:hover{color:#304800}
-.contact-section{background:#111111;border-color:#303430}
-@media(max-width:750px){.archive-grid{grid-template-columns:1fr;padding:12px}.archive-details summary{padding:16px}.archive-grid a{min-height:55px}}
-@media(prefers-reduced-motion:reduce){.archive-details summary,.archive-grid a{transition:none}}
+/* JSL Code — Atmospheric Dark Lime V2.
+   Gentle ambient lime glows, legible typography, no changes to hero or featured project cards.
+   Overrides are scoped to editorial sections only. */
+:root{
+  --ambient-base:#151b19;
+  --ambient-deep:#101716;
+  --ambient-panel:#1d2926;
+  --ambient-text:#f1f5f2;
+  --ambient-muted:#bfccc5;
+  --ambient-line:#354b43;
+  --ambient-accent:#b6ff00;
+}
+/* Preserve original hero and navigation; lift the surrounding dark canvas subtly. */
+.intro-section,.about-section,.credentials-section{
+  position:relative;
+  isolation:isolate;
+  color:var(--ambient-text);
+  overflow:hidden;
+}
+.intro-section{
+  background:
+    radial-gradient(ellipse 56% 58% at 94% 11%,rgba(150,225,35,.115),transparent 72%),
+    radial-gradient(ellipse 42% 44% at 2% 86%,rgba(65,154,123,.12),transparent 76%),
+    linear-gradient(135deg,#18211d 0%,#151c1a 58%,#1a2420 100%);
+}
+.about-section{
+  background:
+    radial-gradient(ellipse 48% 70% at 1% 32%,rgba(151,209,45,.10),transparent 78%),
+    radial-gradient(ellipse 50% 60% at 94% 95%,rgba(50,145,136,.13),transparent 72%),
+    linear-gradient(135deg,#18201d 0%,#111a18 70%,#19241f 100%);
+}
+.credentials-section{
+  border-top:1px solid var(--ambient-line);
+  background:
+    radial-gradient(ellipse 52% 70% at 90% 18%,rgba(161,233,44,.12),transparent 74%),
+    radial-gradient(ellipse 46% 50% at 10% 87%,rgba(60,144,108,.12),transparent 72%),
+    linear-gradient(130deg,#1a2420,#17221e 58%,#202c24);
+}
+.intro-section::before,.about-section::before,.credentials-section::before{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  width:min(46vw,520px);aspect-ratio:1;border:1px solid rgba(182,255,0,.065);
+  border-radius:50%;filter:blur(1px);
+}
+.intro-section::before{right:-18%;top:11%;box-shadow:0 0 125px 60px rgba(147,215,20,.025)}
+.about-section::before{left:-22%;top:6%;box-shadow:0 0 115px 45px rgba(71,170,129,.035)}
+.credentials-section::before{right:-17%;bottom:-20%;box-shadow:0 0 125px 50px rgba(135,201,45,.025)}
+/* Deliberate text hierarchy: lime for small signals, white for titles. */
+.intro-section .section-heading h2,.intro-section .service-item h3,
+.about-section h2,.about-section .about-facts strong,
+.credentials-section h2,.credentials-section .credential h3{
+  color:var(--ambient-text)
+}
+.intro-section .section-heading h2 em,.about-section h2 em,.credentials-section h2 em{
+  color:var(--ambient-accent)
+}
+.intro-section .section-index,.about-section .section-index,.credentials-section .section-index,
+.intro-section .service-number,.intro-section .service-arrow{color:var(--ambient-accent)}
+.intro-section .section-heading>p:last-child,.intro-section .service-item p:not(.service-tools),
+.about-section .about-copy>p,.credentials-section .credentials-header>p,
+.credentials-section .credential p,.credentials-section .credential-meta,
+.credentials-section .credential-subtitle,.credentials-section .credentials-note{
+  color:var(--ambient-muted)
+}
+.intro-section .services,.intro-section .service-item,.about-section .about-facts,
+.credentials-section .credentials-list,.credentials-section .credential{
+  border-color:var(--ambient-line)
+}
+.intro-section .service-tools{color:#c4ef75;opacity:1}
+.about-section .about-facts span{color:var(--ambient-muted)}
+.about-section .text-link,.about-section .text-link:visited{color:var(--ambient-accent)}
+.credentials-section .credential-mark{
+  background:linear-gradient(140deg,#253b2a,#1b2a25);
+  color:var(--ambient-accent);border-color:#4a6651
+}
+.credentials-section .credential-tag,.credentials-section .credential-link,
+.credentials-section .credential-link:visited{color:var(--ambient-accent)}
+.credentials-section .credential-link:hover,.about-section .text-link:hover{color:#d5ff7f}
+/* Projects: only background lighting and optional archive. The three featured
+   project cards (artwork, gradients, dimensions and content) are unchanged. */
+.work-section{
+  background:
+    radial-gradient(ellipse 48% 58% at 88% 7%,rgba(83,170,136,.12),transparent 72%),
+    radial-gradient(ellipse 55% 40% at 8% 90%,rgba(155,232,39,.075),transparent 80%),
+    linear-gradient(130deg,#17282a,#192b2d 55%,#142426);
+  border-color:#314e4e
+}
+.work-section .work-heading>p{color:#cedbd7}
+.archive-details{margin-top:55px;padding-top:25px;border-color:#476260}
+.archive-details summary{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  border:1px solid #4c6865;border-radius:10px;padding:19px 22px;
+  color:var(--ambient-text);background:rgba(37,59,57,.82);font-size:1rem;
+  transition:border-color .2s,background .2s
+}
+.archive-details summary:hover,.archive-details summary:focus-visible{
+  border-color:var(--ambient-accent);background:#304945
+}
+.archive-details summary span{color:var(--ambient-accent)}
+.archive-details[open] summary{border-radius:10px 10px 0 0}
+.archive-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+  padding:20px;border:1px solid #4c6865;border-top:0;border-radius:0 0 10px 10px;
+  background:rgba(22,39,38,.86)
+}
+.archive-grid a,.archive-grid a:visited{
+  display:flex;align-items:center;gap:14px;min-height:65px;padding:17px 18px;
+  border:1px solid #435e5c;border-radius:8px;color:#e4efeb;
+  background:rgba(44,70,66,.78);font-size:.91rem;
+  transition:border-color .2s,background .2s
+}
+.archive-grid a span{color:var(--ambient-accent);margin-left:auto}
+.archive-grid a:hover,.archive-grid a:focus-visible{
+  color:#fff;border-color:var(--ambient-accent);background:#34514c
+}
+/* A dark ending echoes the hero without repeating its composition. */
+.contact-section{
+  background:
+    radial-gradient(ellipse 50% 100% at 91% 45%,rgba(157,222,42,.13),transparent 76%),
+    linear-gradient(115deg,#111713,#17211a 55%,#18241a);
+  border-top:1px solid #3b5140
+}
+@media(max-width:750px){
+  .archive-grid{grid-template-columns:1fr;padding:12px}
+  .archive-details summary{padding:16px}
+  .archive-grid a{min-height:55px}
+  .intro-section::before,.about-section::before,.credentials-section::before{width:75vw}
+  .intro-section{background:radial-gradient(ellipse 85% 38% at 100% 10%,rgba(150,225,35,.09),transparent 80%),linear-gradient(135deg,#19221e,#141c19)}
+  .about-section{background:radial-gradient(ellipse 78% 38% at 0% 22%,rgba(89,180,128,.09),transparent 80%),linear-gradient(130deg,#19211e,#151c19)}
+}
+@media(prefers-reduced-motion:reduce){
+  .archive-details summary,.archive-grid a{transition:none}
+}
