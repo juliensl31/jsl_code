@@ -256,3 +256,8 @@ header nav ul li .nav-contact:hover,header nav ul li .nav-contact:focus-visible{
 @media(max-width:750px){
  header nav ul li:last-child{margin-left:0}
 }
+
+/* Remove the stray list marker only from the navbar contact item. */
+header nav ul li:last-child{list-style:none}
+header nav ul li:last-child::marker{content:""}
+header nav ul li:last-child::before{content:none!important;display:none!important}
