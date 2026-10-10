@@ -171,3 +171,38 @@
 @media(prefers-reduced-motion:reduce){
   .archive-grid a.archive-card{transition:none}
 }
+
+/* Mini-projects: exact visual vocabulary of the 3 flagship project cards,
+   deliberately compact; individual accent/gradient per project. */
+.archive-details .mini-project-grid{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;
+ padding:20px;background:rgba(22,39,38,.52);align-items:stretch
+}
+.mini-project{min-width:0;display:flex;flex-direction:column;background:#202020;
+ border:1px solid #354342;border-radius:12px;overflow:hidden}
+.mini-project .mini-project-visual{
+ min-height:145px;height:145px;padding:17px 18px;aspect-ratio:auto;
+ background:radial-gradient(ellipse at 78% 65%,color-mix(in srgb,var(--mini-accent),transparent 70%),transparent 72%),linear-gradient(145deg,#172329,#0e1318);
+ display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between
+}
+.mini-project .mini-project-visual::after{display:none}
+.mini-project-visual .visual-overline,.mini-project-visual .visual-bottom{
+ color:#d5dddf;font-size:.56rem;line-height:1.4;letter-spacing:.14em;font-weight:700
+}
+.mini-project-visual strong{font-size:clamp(1.5rem,2.2vw,2.15rem);letter-spacing:-.06em;line-height:1.03;color:#f5f5f5;overflow-wrap:anywhere}
+.mini-project-visual strong span{color:var(--mini-accent);display:inline}
+.mini-project .mini-project-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:19px 20px 21px}
+.mini-project .project-type{color:var(--mini-accent);font-size:.62rem;letter-spacing:.12em;line-height:1.5}
+.mini-project .project-copy h3{font-size:1.12rem;line-height:1.25;color:#f5f5f5;margin:10px 0}
+.mini-project .project-copy p{color:#bfcac7;font-size:.83rem;line-height:1.6;margin:0 0 18px}
+.mini-project .project-link,.mini-project .project-link:visited{margin-top:auto;font-size:.8rem;color:var(--mini-accent);gap:12px}
+.mini-project .project-link:hover{filter:brightness(1.18)}
+.mini-flow .mini-project-visual{background:radial-gradient(ellipse at 80% 65%,rgba(233,123,157,.32),transparent 75%),linear-gradient(135deg,#342633,#14151d)}
+.mini-mdlp .mini-project-visual{background:radial-gradient(ellipse at 78% 65%,rgba(242,140,67,.30),transparent 75%),linear-gradient(135deg,#35241a,#16191c)}
+.mini-weather .mini-project-visual{background:radial-gradient(ellipse at 78% 65%,rgba(103,217,240,.32),transparent 75%),linear-gradient(135deg,#173649,#101c2c)}
+.mini-hangman .mini-project-visual{background:radial-gradient(ellipse at 78% 65%,rgba(248,195,92,.26),transparent 75%),linear-gradient(135deg,#322d20,#181a1b)}
+.mini-twitter .mini-project-visual{background:radial-gradient(ellipse at 78% 65%,rgba(101,175,255,.31),transparent 75%),linear-gradient(135deg,#1b304b,#121b29)}
+.mini-lumiere .mini-project-visual{background:radial-gradient(ellipse at 78% 65%,rgba(230,203,145,.29),transparent 75%),linear-gradient(135deg,#332c2a,#1b171e)}
+.mini-judo .mini-project-visual{background:radial-gradient(ellipse at 78% 65%,rgba(231,116,116,.31),transparent 75%),linear-gradient(135deg,#382127,#181719)}
+@media(max-width:950px){.archive-details .mini-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mini-project .mini-project-visual{height:150px}}
+@media(max-width:600px){.archive-details .mini-project-grid{grid-template-columns:1fr;gap:13px;padding:12px}.mini-project .mini-project-visual{height:140px;min-height:140px}.mini-project .mini-project-copy{padding:17px 19px 19px}.mini-project-visual strong{font-size:2rem}}
