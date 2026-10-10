@@ -130,3 +130,44 @@
 @media(prefers-reduced-motion:reduce){
   .archive-details summary,.archive-grid a{transition:none}
 }
+
+/* Secondary portfolio gallery: small visual cards, featured project cards unchanged. */
+.archive-summary-meta{margin-left:auto;color:#a8bbb6;font-size:.78rem;font-weight:400;letter-spacing:.01em}
+.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:22px}
+.archive-grid a.archive-card,.archive-grid a.archive-card:visited{
+  display:block;min-height:0;padding:0;overflow:hidden;
+  border:1px solid #405c58;border-radius:11px;
+  background:#1b2928;color:#f1f5f2;text-decoration:none;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease
+}
+.archive-grid a.archive-card:hover,.archive-grid a.archive-card:focus-visible{
+  transform:translateY(-3px);border-color:#b6ff00;
+  box-shadow:0 14px 28px rgba(0,0,0,.22)
+}
+.archive-card-art{
+  min-height:158px;aspect-ratio:2.6 / 1;position:relative;
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding:17px;overflow:hidden;
+  background-color:#202e2c;background-position:center 18%;background-size:cover
+}
+.archive-card-art::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,14,13,.6),rgba(9,19,17,.04) 60%,rgba(9,19,17,.25))}
+.archive-card-index,.archive-card-arrow{position:relative;z-index:1;color:#f5f7f5;letter-spacing:.12em;font-size:.66rem;font-weight:700}
+.archive-card-arrow{display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(245,247,245,.5);border-radius:50%;font-size:.95rem;letter-spacing:0;background:rgba(12,24,22,.4)}
+.archive-card-caption{padding:20px 21px 22px;display:flex;flex-direction:column;gap:7px}
+.archive-card-kind{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#b6ff00;font-weight:700}
+.archive-card-caption strong{font-size:1.12rem;line-height:1.32;letter-spacing:-.02em;color:#f4f7f5}
+.archive-card.archive-flow .archive-card-art{background-image:linear-gradient(110deg,rgba(33,28,42,.28),rgba(18,16,30,.15)),url('images/Site-flow.png')}
+.archive-card.archive-mdlp .archive-card-art{background-image:linear-gradient(110deg,rgba(26,35,34,.24),rgba(16,24,22,.12)),url('images/Site-mdlp.png')}
+.archive-card.archive-weather .archive-card-art{background-image:linear-gradient(110deg,rgba(12,42,58,.24),rgba(20,35,49,.1)),url('images/meteo.png')}
+.archive-card.archive-hangman .archive-card-art{background-image:linear-gradient(110deg,rgba(30,32,38,.25),rgba(16,20,27,.12)),url('images/hangman.png')}
+.archive-card.archive-twitter .archive-card-art{background-image:linear-gradient(110deg,rgba(12,31,48,.28),rgba(19,34,55,.15)),url('images/TwitterClone.png')}
+.archive-card.archive-lumiere .archive-card-art{background-image:linear-gradient(110deg,rgba(45,27,39,.28),rgba(22,18,31,.12)),url('images/Site-lumiere.png')}
+.archive-card.archive-judo .archive-card-art{background-image:linear-gradient(110deg,rgba(36,27,24,.28),rgba(25,20,18,.12)),url('images/Site-ours.png')}
+@media(max-width:750px){
+  .archive-grid{grid-template-columns:1fr;gap:15px;padding:13px}
+  .archive-card-art{min-height:145px}
+  .archive-summary-meta{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .archive-grid a.archive-card{transition:none}
+}
