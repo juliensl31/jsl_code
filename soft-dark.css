@@ -156,7 +156,7 @@
 .archive-card-caption{padding:20px 21px 22px;display:flex;flex-direction:column;gap:7px}
 .archive-card-kind{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:#b6ff00;font-weight:700}
 .archive-card-caption strong{font-size:1.12rem;line-height:1.32;letter-spacing:-.02em;color:#f4f7f5}
-.archive-card.archive-flow .archive-card-art{background-image:linear-gradient(110deg,rgba(33,28,42,.28),rgba(18,16,30,.15)),url('images/Site-flow.png')}
+.archive-card.archive-flow .archive-card-art{background-image:linear-gradient(110deg,rgba(33,28,42,.28),rgba(18,16,30,.15)),url('images/flow_events.png')}
 .archive-card.archive-mdlp .archive-card-art{background-image:linear-gradient(110deg,rgba(26,35,34,.24),rgba(16,24,22,.12)),url('images/Site-mdlp.png')}
 .archive-card.archive-weather .archive-card-art{background-image:linear-gradient(110deg,rgba(12,42,58,.24),rgba(20,35,49,.1)),url('images/meteo.png')}
 .archive-card.archive-hangman .archive-card-art{background-image:linear-gradient(110deg,rgba(30,32,38,.25),rgba(16,20,27,.12)),url('images/hangman.png')}
