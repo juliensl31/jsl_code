@@ -245,3 +245,14 @@ header nav ul li .nav-contact:hover,header nav ul li .nav-contact:focus-visible{
 @media(prefers-reduced-motion:reduce){
  header nav a,.archive-details summary>span[aria-hidden="true"]{transition:none!important}
 }
+
+/* Separate the contact CTA from the menu without disturbing mobile wrapping. */
+@media(min-width:1001px){
+ header nav ul li:last-child{margin-left:clamp(18px,3vw,48px)}
+}
+@media(min-width:751px) and (max-width:1000px){
+ header nav ul li:last-child{margin-left:12px}
+}
+@media(max-width:750px){
+ header nav ul li:last-child{margin-left:0}
+}
