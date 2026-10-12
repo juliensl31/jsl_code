@@ -131,6 +131,9 @@
     $('wind-value').textContent = formatNum(c.wind_speed_10m, ' km/h');
     $('wind-detail').textContent = 'Direction ' + compass(c.wind_direction_10m);
     $('humidity-value').textContent = formatNum(c.relative_humidity_2m, '%');
+    $('insight-humidity').textContent = formatNum(c.relative_humidity_2m, '%');
+    $('insight-wind').textContent = formatNum(c.wind_speed_10m, ' km/h');
+    $('insight-uv').textContent = formatNum(d.uv_index_max?.[0]);
     $('rain-value').textContent = formatNum(d.precipitation_probability_max?.[0], '%');
     const uv = d.uv_index_max?.[0]; $('uv-value').textContent = formatNum(uv);
     $('uv-detail').textContent = uv == null ? 'Non disponible' : uv < 3 ? 'Faible' : uv < 6 ? 'Modéré' : uv < 8 ? 'Élevé' : 'Très élevé';
