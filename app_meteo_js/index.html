@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#263e72">
+  <meta name="theme-color" content="#142c54">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <meta name="description" content="Météo Live : météo actuelle, prévisions heure par heure et tendances à sept jours dans une interface immersive.">
   <title>Météo Live | Prévisions météo</title>
@@ -16,7 +16,7 @@
     <header class="topbar">
       <a class="brand" href="./index.html" aria-label="Météo Live, accueil"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><circle cx="15" cy="14" r="6.5" fill="#FFD28B"/><path d="M10 27h16a7 7 0 0 0-.5-14 11 11 0 0 0-20 5A5.5 5.5 0 0 0 10 27Z" fill="#EDF5FF" stroke="#C8DFFD" stroke-width="1"/></svg></span><span>Météo <span class="brand-accent">Live</span></span></a>
       <nav class="top-actions" aria-label="Actions météo">
-        <span class="live-pill"><span class="pulse"></span> PRÉVISIONS ACTUALISÉES</span>
+        <span class="live-pill"><span class="pulse"></span> Météo en direct</span>
         <button id="favorites-open" class="icon-button favorites-button" title="Villes favorites" aria-label="Afficher mes villes favorites" type="button">★ <span>Favoris</span></button>
         <button id="share-btn" class="icon-button share-button" title="Partager cette ville" aria-label="Partager cette ville" type="button">↗ <span>Partager</span></button>
         <button id="locate-btn" class="icon-button locate-button" title="Ma position" aria-label="Utiliser ma position" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/><circle cx="12" cy="12" r="8"/></svg><span>Ma position</span></button>
@@ -24,14 +24,14 @@
       </nav>
     </header>
     <main id="main">
-      <div class="intro-row"><p class="eyebrow"><span class="line"></span> MÉTÉO & PRÉVISIONS</p><span id="updated" class="updated" aria-live="polite">Chargement…</span></div>
-      <div class="heading-row"><div><h1>La météo, <em>tout simplement.</em></h1><p class="subheading">Les conditions du moment et les prévisions des prochains jours.</p></div>
+      <div class="intro-row"><p class="eyebrow"><span class="line"></span> PRÉVISIONS LOCALES</p><span id="updated" class="updated" aria-live="polite">Chargement…</span></div>
+      <div class="heading-row"><div><h1>Météo Live<span class="headline-period">.</span></h1><p class="subheading">Les conditions près de vous et partout dans le monde.</p></div>
       <button class="search-trigger" id="search-open" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"/><path d="m16 16 5 5"/></svg><span>Rechercher une ville</span><kbd>/</kbd></button></div>
       <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
       <section class="hero-panel" aria-labelledby="city-name">
-        <div class="hero-top"><div><span class="field-label">CONDITIONS ACTUELLES</span><div class="location-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></svg><h2 id="city-name">Toulouse</h2></div><p id="region-name" class="region">France</p></div><span id="date-label" class="hero-date">—</span></div>
+        <div class="hero-top"><div><span class="field-label">EN CE MOMENT</span><div class="location-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></svg><h2 id="city-name">Toulouse</h2></div><p id="region-name" class="region">France</p></div><span id="date-label" class="hero-date">—</span></div>
         <div class="hero-main"><div class="hero-reading"><div class="temperature-row"><span id="temp-now" class="giant-temp">--</span><span id="temp-unit" class="temp-unit">°C</span></div><p id="condition" class="condition">Recherche des prévisions…</p><p id="feels" class="feels">Ressenti —</p><div class="high-low"><span id="high">↑ —</span><span id="low">↓ —</span></div></div><div id="hero-symbol" class="hero-symbol" aria-hidden="true"><span class="weather-placeholder">☀</span></div></div>
-        <div class="hero-bottom"><span id="hero-message">Votre météo du jour.</span><button id="favorite-toggle" class="favorite-toggle" type="button" aria-pressed="false">☆ Ajouter aux favoris</button><button id="refresh-btn" class="text-button" type="button" title="Actualiser les prévisions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 10A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.5-4"/></svg><span>Actualiser</span></button></div>
+        <div class="hero-bottom"><span id="hero-message">Conditions et prévisions actualisées.</span><button id="favorite-toggle" class="favorite-toggle" type="button" aria-pressed="false">☆ Ajouter aux favoris</button><button id="refresh-btn" class="text-button" type="button" title="Actualiser les prévisions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 10A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.5-4"/></svg><span>Actualiser</span></button></div>
       </section>
       <section class="metrics" aria-label="Conditions météorologiques détaillées">
         <article class="metric-card"><span class="metric-icon">↗</span><span class="metric-label">VENT</span><strong id="wind-value">—</strong><small id="wind-detail">Direction —</small></article>
