@@ -280,3 +280,32 @@ footer ul li::before{content:none!important;display:none!important}
  footer .container{align-items:flex-start}
 }
 @media(max-width:380px){footer .footer-copyright{white-space:normal}}
+
+/* Testimonials restored from the original website, presented without Bootstrap. */
+.testimonials-section{
+ position:relative;overflow:hidden;
+ background:radial-gradient(ellipse at 92% 15%,rgba(182,255,0,.10),transparent 48%),
+ radial-gradient(ellipse at 5% 95%,rgba(52,130,113,.13),transparent 45%),#131c19;
+ border-top:1px solid #31473d;border-bottom:1px solid #31473d
+}
+.testimonials-section .section-heading h2{color:#f4f6f4}
+.testimonials-section .section-heading h2 em{color:#b6ff00}
+.testimonials-section .section-heading>p:last-child{color:#bdc9c2}
+.testimonials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:22px}
+.testimonial-card{
+ display:flex;flex-direction:column;justify-content:space-between;
+ margin:0;padding:34px 32px 28px;
+ border:1px solid #3b5547;border-radius:13px;
+ background:linear-gradient(150deg,rgba(36,52,43,.95),rgba(22,32,28,.96));
+ box-shadow:0 20px 50px rgba(0,0,0,.12)
+}
+.testimonial-card blockquote{margin:0}
+.testimonial-quote-mark{display:block;font-size:3.5rem;line-height:.9;color:#b6ff00;font-weight:700}
+.testimonial-card blockquote p{margin:17px 0 28px;line-height:1.85;color:#e0e9e2;font-size:.96rem}
+.testimonial-author{display:flex;gap:14px;align-items:center;border-top:1px solid #3b5547;padding-top:20px}
+.testimonial-author img{width:52px;height:52px;object-fit:cover;border-radius:50%;border:2px solid #52664c}
+.testimonial-author span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.testimonial-author strong{font-size:.94rem;color:#f5f8f5}
+.testimonial-author small{font-size:.8rem;color:#bdd0c4}
+@media(max-width:850px){.testimonials-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.testimonial-card{padding:25px 22px 23px}.testimonial-card blockquote p{font-size:.9rem;line-height:1.75}}
