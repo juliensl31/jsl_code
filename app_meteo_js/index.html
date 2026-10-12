@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a1225">
+  <meta name="theme-color" content="#263e72">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <meta name="description" content="Météo Live : météo actuelle, prévisions heure par heure et tendances à sept jours dans une interface immersive.">
-  <title>Météo Live | Votre météo, autrement.</title>
+  <title>Météo Live | Prévisions météo</title>
   <link rel="stylesheet" href="./styles.css">
   <script defer src="./script.js"></script>
 </head>
@@ -13,9 +14,9 @@
   <div class="ambient ambient-a" aria-hidden="true"></div><div class="ambient ambient-b" aria-hidden="true"></div>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="./index.html" aria-label="Météo Live, accueil"><span class="brand-mark" aria-hidden="true">☼</span><span>MÉTÉO<span class="brand-accent">LIVE</span><small>YOUR WEATHER, REIMAGINED.</small></span></a>
+      <a class="brand" href="./index.html" aria-label="Météo Live, accueil"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><circle cx="15" cy="14" r="6.5" fill="#FFD28B"/><path d="M10 27h16a7 7 0 0 0-.5-14 11 11 0 0 0-20 5A5.5 5.5 0 0 0 10 27Z" fill="#EDF5FF" stroke="#C8DFFD" stroke-width="1"/></svg></span><span>Météo <span class="brand-accent">Live</span></span></a>
       <nav class="top-actions" aria-label="Actions météo">
-        <span class="live-pill"><span class="pulse"></span> DONNÉES MÉTÉO</span>
+        <span class="live-pill"><span class="pulse"></span> PRÉVISIONS ACTUALISÉES</span>
         <button id="favorites-open" class="icon-button favorites-button" title="Villes favorites" aria-label="Afficher mes villes favorites" type="button">★ <span>Favoris</span></button>
         <button id="share-btn" class="icon-button share-button" title="Partager cette ville" aria-label="Partager cette ville" type="button">↗ <span>Partager</span></button>
         <button id="locate-btn" class="icon-button locate-button" title="Ma position" aria-label="Utiliser ma position" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/><circle cx="12" cy="12" r="8"/></svg><span>Ma position</span></button>
@@ -23,14 +24,14 @@
       </nav>
     </header>
     <main id="main">
-      <div class="intro-row"><p class="eyebrow"><span class="line"></span> LE TEMPS, EN UN COUP D'ŒIL</p><span id="updated" class="updated" aria-live="polite">Chargement…</span></div>
-      <div class="heading-row"><div><h1>Le ciel a <em>des choses à raconter.</em></h1><p class="subheading">Des prévisions précises, une expérience qui donne envie de regarder dehors.</p></div>
+      <div class="intro-row"><p class="eyebrow"><span class="line"></span> MÉTÉO & PRÉVISIONS</p><span id="updated" class="updated" aria-live="polite">Chargement…</span></div>
+      <div class="heading-row"><div><h1>La météo, <em>tout simplement.</em></h1><p class="subheading">Les conditions du moment et les prévisions des prochains jours.</p></div>
       <button class="search-trigger" id="search-open" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"/><path d="m16 16 5 5"/></svg><span>Rechercher une ville</span><kbd>/</kbd></button></div>
       <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
       <section class="hero-panel" aria-labelledby="city-name">
-        <div class="hero-top"><div><span class="field-label">MÉTÉO ACTUELLE</span><div class="location-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></svg><h2 id="city-name">Toulouse</h2></div><p id="region-name" class="region">France</p></div><span id="date-label" class="hero-date">—</span></div>
+        <div class="hero-top"><div><span class="field-label">CONDITIONS ACTUELLES</span><div class="location-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.7"/></svg><h2 id="city-name">Toulouse</h2></div><p id="region-name" class="region">France</p></div><span id="date-label" class="hero-date">—</span></div>
         <div class="hero-main"><div class="hero-reading"><div class="temperature-row"><span id="temp-now" class="giant-temp">--</span><span id="temp-unit" class="temp-unit">°C</span></div><p id="condition" class="condition">Recherche des prévisions…</p><p id="feels" class="feels">Ressenti —</p><div class="high-low"><span id="high">↑ —</span><span id="low">↓ —</span></div></div><div id="hero-symbol" class="hero-symbol" aria-hidden="true"><span class="weather-placeholder">☀</span></div></div>
-        <div class="hero-bottom"><span id="hero-message">Votre météo en temps réel.</span><button id="favorite-toggle" class="favorite-toggle" type="button" aria-pressed="false">☆ Ajouter aux favoris</button><button id="refresh-btn" class="text-button" type="button" title="Actualiser les prévisions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 10A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.5-4"/></svg><span>Actualiser</span></button></div>
+        <div class="hero-bottom"><span id="hero-message">Votre météo du jour.</span><button id="favorite-toggle" class="favorite-toggle" type="button" aria-pressed="false">☆ Ajouter aux favoris</button><button id="refresh-btn" class="text-button" type="button" title="Actualiser les prévisions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 10A7 7 0 0 1 18 6l2 6M4 12l2 6a7 7 0 0 0 12.5-4"/></svg><span>Actualiser</span></button></div>
       </section>
       <section class="metrics" aria-label="Conditions météorologiques détaillées">
         <article class="metric-card"><span class="metric-icon">↗</span><span class="metric-label">VENT</span><strong id="wind-value">—</strong><small id="wind-detail">Direction —</small></article>
@@ -38,13 +39,13 @@
         <article class="metric-card"><span class="metric-icon">◌</span><span class="metric-label">PLUIE</span><strong id="rain-value">—</strong><small>Probabilité aujourd'hui</small></article>
         <article class="metric-card"><span class="metric-icon">☀</span><span class="metric-label">INDICE UV</span><strong id="uv-value">—</strong><small id="uv-detail">Indice maximal du jour</small></article>
       </section>
-      <section class="air-quality-panel" aria-labelledby="air-title"><div><span class="eyebrow">QUALITÉ DE L’AIR</span><h2 id="air-title">Respirez, on fait le point.</h2><p id="air-summary">Chargement des données de qualité de l’air…</p></div><div class="air-stats"><div><span>INDICE EUROPÉEN</span><strong id="aqi-value">—</strong><small id="aqi-level">Non disponible</small></div><div><span>PARTICULES FINES PM2.5</span><strong id="pm-value">—</strong><small>µg/m³</small></div></div></section>
+      <section class="air-quality-panel" aria-labelledby="air-title"><div><span class="eyebrow">QUALITÉ DE L’AIR</span><h2 id="air-title">Qualité de l’air</h2><p id="air-summary">Chargement des données de qualité de l’air…</p></div><div class="air-stats"><div><span>INDICE EUROPÉEN</span><strong id="aqi-value">—</strong><small id="aqi-level">Non disponible</small></div><div><span>PARTICULES FINES PM2.5</span><strong id="pm-value">—</strong><small>µg/m³</small></div></div></section>
       <section class="forecast-card hourly-card" aria-labelledby="hourly-title"><div class="section-head"><div><span class="eyebrow">01 / PROCHAINES HEURES</span><h2 id="hourly-title">Heure par heure<span class="accent-dot">.</span></h2></div><span class="head-label">24 H À VENIR</span></div><div id="hourly-list" class="hourly-list" tabindex="0" aria-label="Prévisions horaires défilantes"><div class="loading-line">Prévisions en cours de chargement…</div></div></section>
       <div class="lower-grid">
         <section class="forecast-card weekly-card" aria-labelledby="weekly-title"><div class="section-head"><div><span class="eyebrow">02 / LA TENDANCE</span><h2 id="weekly-title">Les 7 prochains jours<span class="accent-dot">.</span></h2></div></div><p class="daily-hint">Sélectionnez une journée pour consulter les détails.</p><div id="daily-list" class="daily-list"><div class="loading-line">Prévisions en cours de chargement…</div></div></section>
         <aside class="side-stack">
-          <section class="forecast-card sun-card" aria-labelledby="sun-title"><div class="section-head"><div><span class="eyebrow">03 / LUMIÈRE DU JOUR</span><h2 id="sun-title">Soleil & lumière<span class="accent-dot">.</span></h2></div></div><div class="sun-illustration" aria-hidden="true"><div class="sun-path"></div><div id="sun-orb" class="sun-orb"></div><div class="sun-horizon"></div></div><div class="sun-times"><div><small>LEVER</small><strong id="sunrise">—</strong></div><div><small>COUCHER</small><strong id="sunset">—</strong></div></div><p id="daylight" class="sun-caption">Durée du jour : —</p></section>
-          <section class="insight-card"><span class="eyebrow">BON À SAVOIR</span><div class="insight-icon">✦</div><h3 id="insight-title">Un coup d'œil suffit.</h3><p id="insight-text">Les tendances météo de votre ville s'afficheront ici.</p><button id="insight-search" class="insight-link" type="button">Explorer une autre ville <span aria-hidden="true">↗</span></button></section>
+          <section class="forecast-card sun-card" aria-labelledby="sun-title"><div class="section-head"><div><span class="eyebrow">03 / LUMIÈRE DU JOUR</span><h2 id="sun-title">Lever et coucher du soleil</h2></div></div><div class="sun-illustration" aria-hidden="true"><div class="sun-path"></div><div id="sun-orb" class="sun-orb"></div><div class="sun-horizon"></div></div><div class="sun-times"><div><small>LEVER</small><strong id="sunrise">—</strong></div><div><small>COUCHER</small><strong id="sunset">—</strong></div></div><p id="daylight" class="sun-caption">Durée du jour : —</p></section>
+          <section class="insight-card"><span class="eyebrow">CONSEIL DU JOUR</span><div class="insight-icon">✦</div><h3 id="insight-title">Les conditions du jour</h3><p id="insight-text">Les tendances météo de votre ville s'afficheront ici.</p><button id="insight-search" class="insight-link" type="button">Explorer une autre ville <span aria-hidden="true">↗</span></button></section>
         </aside>
       </div>
     </main>
