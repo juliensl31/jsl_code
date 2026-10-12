@@ -134,6 +134,9 @@
     $('insight-humidity').textContent = formatNum(c.relative_humidity_2m, '%');
     $('insight-wind').textContent = formatNum(c.wind_speed_10m, ' km/h');
     $('insight-uv').textContent = formatNum(d.uv_index_max?.[0]);
+    $('pressure-value').textContent = formatNum(c.surface_pressure, ' hPa');
+    $('visibility-value').textContent = Number.isFinite(c.visibility) ? (c.visibility / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 1 }) + ' km' : '—';
+    $('cloudcover-value').textContent = formatNum(c.cloud_cover, '%');
     $('rain-value').textContent = formatNum(d.precipitation_probability_max?.[0], '%');
     const uv = d.uv_index_max?.[0]; $('uv-value').textContent = formatNum(uv);
     $('uv-detail').textContent = uv == null ? 'Non disponible' : uv < 3 ? 'Faible' : uv < 6 ? 'Modéré' : uv < 8 ? 'Élevé' : 'Très élevé';
@@ -177,7 +180,7 @@
     const id = ++state.requestId; setLoading(true); notice();
     const qs = new URLSearchParams({
       latitude: String(city.latitude), longitude: String(city.longitude),
-      current: 'temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,wind_direction_10m',
+      current: 'temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,wind_direction_10m,surface_pressure,visibility,cloud_cover',
       hourly: 'temperature_2m,precipitation_probability,weather_code,is_day',
       daily: 'weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max,sunrise,sunset',
       timezone: 'auto', forecast_days: '7', wind_speed_unit: 'kmh'
