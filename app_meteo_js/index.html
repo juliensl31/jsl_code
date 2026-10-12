@@ -47,10 +47,17 @@
       <div class="detail-intro"><span class="eyebrow">AU-DELÀ DES PRÉVISIONS</span><h2>Chaque détail compte<span class="accent-dot">.</span></h2></div>
       <div class="liquid-details">
       <section class="air-quality-panel" aria-labelledby="air-title"><div><span class="eyebrow">QUALITÉ DE L’AIR</span><h2 id="air-title">Qualité de l’air</h2><p id="air-summary">Chargement des données de qualité de l’air…</p></div><div class="air-stats"><div><span>INDICE EUROPÉEN</span><strong id="aqi-value">—</strong><small id="aqi-level">Non disponible</small></div><div><span>PARTICULES FINES PM2.5</span><strong id="pm-value">—</strong><small>µg/m³</small></div></div></section>
-        <aside class="side-stack">
-          <section class="forecast-card sun-card" aria-labelledby="sun-title"><div class="section-head"><div><span class="eyebrow">CYCLE SOLAIRE</span><h2 id="sun-title">Lever et coucher du soleil</h2></div></div><div class="sun-illustration" aria-hidden="true"><div class="sun-path"></div><div id="sun-orb" class="sun-orb"></div><div class="sun-horizon"></div></div><div class="sun-times"><div><small>LEVER</small><strong id="sunrise">—</strong></div><div><small>COUCHER</small><strong id="sunset">—</strong></div></div><p id="daylight" class="sun-caption">Durée du jour : —</p></section>
+<section class="forecast-card sun-card" aria-labelledby="sun-title"><div class="section-head"><div><span class="eyebrow">CYCLE SOLAIRE</span><h2 id="sun-title">Lever et coucher du soleil</h2></div></div><div class="sun-illustration" aria-hidden="true"><div class="sun-path"></div><div id="sun-orb" class="sun-orb"></div><div class="sun-horizon"></div></div><div class="sun-times"><div><small>LEVER</small><strong id="sunrise">—</strong></div><div><small>COUCHER</small><strong id="sunset">—</strong></div></div><p id="daylight" class="sun-caption">Durée du jour : —</p></section>
           <section class="insight-card"><span class="eyebrow">À SAVOIR AUJOURD’HUI</span><h3 id="insight-title">Les conditions du jour</h3><p id="insight-text">Les tendances météo de votre ville s'afficheront ici.</p><div class="insight-pills" aria-label="Indicateurs météo du jour"><div class="insight-pill"><span>Humidité</span><strong id="insight-humidity">—</strong></div><div class="insight-pill"><span>Vent</span><strong id="insight-wind">—</strong></div><div class="insight-pill"><span>UV max.</span><strong id="insight-uv">—</strong></div></div><button id="insight-search" class="insight-link" type="button">Explorer une autre ville <span aria-hidden="true">↗</span></button></section>
-        </aside>
+        <section class="forecast-card atmosphere-card" aria-labelledby="atmosphere-title">
+          <span class="eyebrow">ATMOSPHÈRE</span><h2 id="atmosphere-title">Pression &amp; visibilité</h2>
+          <p>Les conditions atmosphériques autour de vous.</p>
+          <div class="atmosphere-stats">
+            <div class="atmosphere-stat"><span>Pression</span><strong id="pressure-value">—</strong><small>Au niveau de la surface</small></div>
+            <div class="atmosphere-stat"><span>Visibilité</span><strong id="visibility-value">—</strong><small>Distance estimée</small></div>
+            <div class="atmosphere-stat"><span>Couverture nuageuse</span><strong id="cloudcover-value">—</strong><small>Part du ciel couvert</small></div>
+          </div>
+        </section>
 
       </div>
     </main>
