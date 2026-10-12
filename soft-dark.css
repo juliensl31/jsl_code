@@ -261,3 +261,22 @@ header nav ul li .nav-contact:hover,header nav ul li .nav-contact:focus-visible{
 header nav ul li:last-child{list-style:none}
 header nav ul li:last-child::marker{content:""}
 header nav ul li:last-child::before{content:none!important;display:none!important}
+
+/* Screenshot review — navbar, hero cleanup, and copyright alignment. */
+header #flex-header{display:flex;align-items:center;justify-content:space-between}
+header nav ul{list-style:none!important;margin:0;padding:0;align-items:center}
+header nav ul li{list-style:none!important;position:relative}
+header nav ul li::before,header nav ul li::after{content:none!important;display:none!important}
+header nav ul li::marker{content:""}
+header nav ul li a{vertical-align:middle}
+.jsl-eyebrow .jsl-dot{vertical-align:middle}
+footer .container{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .footer-copyright{display:inline-block;white-space:nowrap;line-height:1.5}
+footer .footer-copyright #current-year{display:inline}
+footer ul{margin:0;padding:0;list-style:none}
+footer ul li::before{content:none!important;display:none!important}
+@media(max-width:750px){
+ header #flex-header{align-items:flex-start}
+ footer .container{align-items:flex-start}
+}
+@media(max-width:380px){footer .footer-copyright{white-space:normal}}
