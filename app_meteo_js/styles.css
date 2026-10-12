@@ -158,3 +158,14 @@ body.weather-snow .hero-panel{background:radial-gradient(ellipse 95% 94% at 80% 
 @media(max-width:560px){.app-shell{width:calc(100% - 24px)}.brand{font-size:.93rem}.brand-mark{width:30px;height:30px}.top-actions{gap:5px}.icon-button{min-height:40px;min-width:40px;padding:8px}.favorites-button span,.share-button span,.locate-button span{display:none}.heading-row{margin-top:15px;gap:14px}.heading-row h1{font-size:2.48rem}.subheading{font-size:.78rem}.search-trigger{width:min(100%,350px)}.overview-grid{gap:10px}.hero-panel{padding:21px 19px;min-height:310px}.hero-top{gap:7px}.location-line h2{font-size:1.42rem}.hero-date{font-size:.65rem}.hero-main{min-height:182px}.giant-temp{font-size:6.6rem}.hero-symbol{right:5%;width:90px}.hero-bottom>span{flex-basis:100%}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,1fr);gap:10px}.metric-card{min-height:118px}.metric-icon{height:31px;width:31px;font-size:1rem;margin-bottom:4px}.metric-card strong{font-size:1.28rem}.hourly-card,.weekly-card{padding:19px 15px}.hourly-list{grid-auto-columns:76px}.day-row{grid-template-columns:70px 30px minmax(37px,1fr) 37px 37px;gap:5px}.day-desc{display:none}.day-name{font-size:.75rem}.day-icon svg{width:28px;height:28px}.day-temp,.day-min{font-size:.77rem}.side-stack{grid-template-columns:1fr}.footer{flex-direction:column}.dialog-inner{padding:21px}}
 @media(max-width:390px){.brand-mark{display:none}.giant-temp{font-size:5.9rem}.hero-symbol{width:73px}.hero-panel{padding:19px 15px}.metric-card small{font-size:.64rem}.day-row{grid-template-columns:62px 27px minmax(30px,1fr) 34px 34px;gap:3px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* JSL Code identity and enriched insights */
+.heading-row .weather-title{color:#f4f4fa;font-weight:580}
+.heading-row .weather-title em{color:#b6ff00;font-style:normal;font-weight:580}
+.insight-card{justify-content:space-between;gap:13px}
+.insight-pills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:5px 0 4px}
+.insight-pill{min-width:0;padding:12px 11px;border:1px solid rgba(225,238,255,.09);border-radius:13px;background:rgba(225,239,255,.055)}
+.insight-pill span{display:block;font-size:.68rem;color:#a4b0c8;white-space:nowrap;margin-bottom:5px}
+.insight-pill strong{display:block;font-size:1rem;font-weight:600;letter-spacing:-.035em;color:#f2f6ff;white-space:nowrap}
+@media(max-width:560px){.insight-pills{gap:7px}.insight-pill{padding:11px 8px}.insight-pill span{font-size:.64rem}.insight-pill strong{font-size:.88rem}}
+@media(max-width:365px){.insight-pills{grid-template-columns:1fr}.insight-pill{display:flex;align-items:center;justify-content:space-between}.insight-pill span{margin-bottom:0}}
