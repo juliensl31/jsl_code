@@ -8,3 +8,31 @@ body.weather-snow .hero-panel{background:radial-gradient(ellipse at 82% 25%,rgba
 @media(max-width:740px){.app-shell{width:calc(100% - 34px)}.topbar{min-height:88px}.brand{font-size:1.05rem}.brand-mark{width:38px;height:38px;font-size:2rem}.brand small{font-size:.46rem}.live-pill{display:none}.locate-button span{display:none}.heading-row{flex-direction:column;align-items:stretch;margin-bottom:24px}.search-trigger{width:100%;min-width:0}.intro-row{margin-top:32px}.hero-top{padding:28px 25px 0}.hero-main{padding:8px 30px 24px;min-height:235px}.hero-symbol{width:140px;height:140px}.giant-temp{font-size:6rem}.temp-unit{font-size:1.65rem}.hero-bottom{padding:14px 23px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.metric-card{padding:19px;min-height:145px}.side-stack{grid-template-columns:1fr 1fr}.forecast-card{padding:23px 21px}}
 @media(max-width:530px){.hero-top{padding:25px 21px 0}.hero-date{font-size:.68rem}.location-line h2{font-size:1.25rem}.hero-main{padding:10px 20px 26px;min-height:260px;position:relative}.hero-symbol{position:absolute;right:12px;top:5px;width:123px;height:145px;opacity:.83}.hero-reading{position:relative;z-index:1;padding-top:60px}.giant-temp{font-size:6.2rem}.condition{font-size:1.12rem}.hero-bottom{font-size:.72rem}.metric-card strong{font-size:1.53rem}.metric-icon{top:14px;right:15px}.side-stack{grid-template-columns:1fr}.forecast-card{padding:24px 19px}.day-row{grid-template-columns:66px 30px minmax(50px,1fr) 35px 35px;gap:6px}.day-row .day-desc{display:none}.day-row svg{width:29px;height:29px}.day-row .day-rain{display:none}.day-row .day-name{font-size:.78rem}.hourly-list{grid-auto-columns:82px}.footer{align-items:flex-start;flex-direction:column}.dialog-inner{padding:22px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Météo Live: extra features */
+.favorite-toggle{border:1px solid rgba(170,206,248,.3);border-radius:9px;background:rgba(146,186,242,.1);color:#e1edff;padding:7px 11px;font-size:.75rem;font-weight:700;transition:background .2s}
+.favorite-toggle:hover,.favorite-toggle[aria-pressed="true"]{background:rgba(243,202,112,.16);color:#ffe2a3}
+.air-quality-panel{display:flex;align-items:center;justify-content:space-between;gap:28px;margin:0 0 20px;padding:25px 31px;background:linear-gradient(115deg,#1a3449,#11263d);border:1px solid rgba(125,204,214,.24);border-radius:19px}
+.air-quality-panel h2{margin:6px 0 5px;font-family:Manrope,sans-serif;font-size:1.2rem;letter-spacing:-.04em}
+.air-quality-panel p{font-size:.8rem;color:#b2d1db;margin:0;max-width:520px}
+.air-stats{display:flex;gap:34px;flex-shrink:0}
+.air-stats>div{display:flex;flex-direction:column;gap:3px}
+.air-stats span{color:#99c4d2;font-size:.59rem;font-weight:800;letter-spacing:.11em}
+.air-stats strong{font-family:Manrope,sans-serif;font-size:1.8rem;line-height:1.2}
+.air-stats small{color:#9fbecf;font-size:.73rem}
+.daily-hint{margin:-14px 0 14px;color:#9aaec9;font-size:.76rem}
+.day-row{width:100%;border-left:0;border-right:0;border-bottom:0;background:transparent;color:inherit;text-align:left;cursor:pointer;font:inherit}
+.day-row:hover{background:rgba(133,174,223,.08)}
+.day-detail-symbol{display:flex;justify-content:center;margin:0 auto}
+.day-detail-symbol svg{width:115px;height:120px}
+.day-detail-condition{text-align:center;color:#d4e7fc;font-weight:700;margin:0 0 18px}
+.day-detail-grid{display:grid;gap:0;border-top:1px solid rgba(177,208,245,.15)}
+.day-detail-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(177,208,245,.13);font-size:.86rem}
+.day-detail-row span{color:#a7bdd5}.day-detail-row strong{white-space:nowrap}
+.favorite-row{display:flex;gap:8px;align-items:stretch}
+.favorite-row .city-result{flex:1;min-width:0}
+.remove-favorite{width:43px;min-width:43px;background:rgba(240,131,131,.08);color:#ffb6b6;border:1px solid rgba(240,131,131,.18);border-radius:10px;font-size:1.3rem}
+.remove-favorite:hover{background:rgba(240,131,131,.18)}
+@media(max-width:930px){.air-quality-panel{align-items:flex-start;flex-direction:column}.air-stats{width:100%;justify-content:space-between}}
+@media(max-width:740px){.favorites-button span,.share-button span{display:none}.favorites-button,.share-button{min-width:45px;padding:10px;font-size:1.1rem}.top-actions{gap:7px}.air-quality-panel{padding:22px 20px}.air-stats{gap:20px}}
+@media(max-width:400px){.air-stats span{font-size:.52rem}.air-stats strong{font-size:1.5rem}.favorite-toggle{font-size:.67rem;padding:6px}.hero-bottom{gap:8px;flex-wrap:wrap}}
