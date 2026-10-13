@@ -65,3 +65,13 @@ footer.universe-site-footer .container.universe-footer-grid{grid-template-column
 footer.universe-site-footer .universe-footer-home img{width:82px;height:58px;object-fit:contain}
 footer.universe-site-footer .universe-bridge-line>img{width:58px;height:58px;object-fit:contain}
 @media(max-width:520px){footer.universe-site-footer .universe-footer-home img{width:76px;height:54px}footer.universe-site-footer .universe-bridge-line>img{width:52px;height:52px}}
+
+/* Native disclosure is functional even if a script fails to load. */
+details.universe-switch{position:relative;overflow:visible;z-index:100}
+details.universe-switch>.universe-trigger{display:inline-flex;list-style:none;cursor:pointer;user-select:none}
+details.universe-switch>.universe-trigger::-webkit-details-marker{display:none}
+details.universe-switch>.universe-trigger::marker{content:""}
+details.universe-switch:not([open])>.universe-menu{display:none!important}
+details.universe-switch[open]>.universe-menu{display:block!important;z-index:1000}
+details.universe-switch[open]>.universe-trigger{border-color:var(--universe-accent)}
+header,header nav,header nav ul{overflow:visible}
