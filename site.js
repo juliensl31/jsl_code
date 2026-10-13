@@ -4,23 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* Accessible cross-universe menu; no native dialogs. */
+/* Native details: JavaScript only enhances dismissal and arrow-key navigation. */
 (() => {
   const switcher = document.querySelector('[data-universe-switch]');
   if (!switcher) return;
-  const trigger = switcher.querySelector('[data-universe-trigger]');
+  const summary = switcher.querySelector('[data-universe-trigger]');
   const menu = switcher.querySelector('[data-universe-menu]');
   const entries = [...menu.querySelectorAll('a[href]')];
-  const setOpen = (open) => {
-    menu.hidden = !open;
-    trigger.setAttribute('aria-expanded', String(open));
-    switcher.classList.toggle('is-open', open);
+  const close = (restoreFocus = false) => {
+    switcher.open = false;
+    if (restoreFocus) summary.focus();
   };
-  trigger.addEventListener('click', () => setOpen(menu.hidden));
-  trigger.addEventListener('keydown', (event) => {
+  summary.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
-      setOpen(true);
+      switcher.open = true;
       entries[event.key === 'ArrowDown' ? 0 : entries.length - 1]?.focus();
     }
   });
@@ -28,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const position = entries.indexOf(document.activeElement);
     if (event.key === 'Escape') {
       event.preventDefault();
-      setOpen(false);
-      trigger.focus();
+      close(true);
     } else if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       entries[(position + (event.key === 'ArrowDown' ? 1 : -1) + entries.length) % entries.length]?.focus();
@@ -39,15 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   document.addEventListener('pointerdown', (event) => {
-    if (!switcher.contains(event.target)) setOpen(false);
+    if (switcher.open && !switcher.contains(event.target)) close();
   });
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !menu.hidden) {
-      setOpen(false);
-      trigger.focus();
-    }
-  });
-  switcher.addEventListener('focusout', (event) => {
-    if (!switcher.contains(event.relatedTarget)) setOpen(false);
+    if (event.key === 'Escape' && switcher.open) close(true);
   });
 })();
