@@ -60,3 +60,8 @@ footer.universe-site-footer .universe-footer-home img{width:70px;height:48px;obj
 /* Three intentional footer areas: identity, unique site links, other universe. */
 footer.universe-site-footer .container.universe-footer-grid{grid-template-columns:minmax(170px,1.4fr) minmax(140px,1fr) minmax(190px,1.25fr)}
 @media(max-width:640px){footer.universe-site-footer .container.universe-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.universe-footer-bridge{grid-column:1/-1}}
+
+/* Footer identity: slightly larger approved marks, without changing the page layout. */
+footer.universe-site-footer .universe-footer-home img{width:82px;height:58px;object-fit:contain}
+footer.universe-site-footer .universe-bridge-line>img{width:58px;height:58px;object-fit:contain}
+@media(max-width:520px){footer.universe-site-footer .universe-footer-home img{width:76px;height:54px}footer.universe-site-footer .universe-bridge-line>img{width:52px;height:52px}}
