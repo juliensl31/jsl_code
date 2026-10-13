@@ -1,6 +1,6 @@
 /* Cross-universe navigation; isolated from existing site styling. */
 .universe-switch{position:relative;display:inline-flex;align-items:center;z-index:60}
-.universe-trigger{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:8px 11px;border:1px solid transparent;border-radius:6px;background:transparent;color:#c7ced0;font:600 13px/1.2 inherit;cursor:pointer;white-space:nowrap}
+.universe-trigger{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:8px 11px;border:1px solid transparent;border-radius:6px;background:transparent;color:#c7ced0;font-size:13px;font-weight:600;line-height:1.2;font-family:inherit;cursor:pointer;white-space:nowrap}
 .universe-trigger:hover,.universe-trigger:focus-visible,.universe-switch.is-open .universe-trigger{color:var(--universe-accent);border-color:var(--universe-border)}
 .universe-chevron{width:7px;height:7px;border:solid currentColor;border-width:0 1.5px 1.5px 0;transform:translateY(-2px) rotate(45deg);transition:transform .15s}
 .universe-switch.is-open .universe-chevron{transform:translateY(2px) rotate(225deg)}
