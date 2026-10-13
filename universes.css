@@ -52,3 +52,11 @@ footer.universe-site-footer{margin-top:0;padding:0 0 0;background:#0d1111;border
 footer.universe-site-footer .container.universe-footer-grid{display:grid;align-items:start;justify-content:initial}
 footer.universe-site-footer .container.universe-footer-bottom{display:flex;align-items:center;justify-content:space-between}
 footer.universe-site-footer .universe-footer-home img{width:70px;height:48px;object-position:left center}
+
+
+/* Globe icon uses a vector outline instead of a typographic circle. */
+.universe-trigger svg.universe-globe{display:block;flex:none;width:19px;height:19px;stroke:currentColor}
+
+/* Three intentional footer areas: identity, unique site links, other universe. */
+footer.universe-site-footer .container.universe-footer-grid{grid-template-columns:minmax(170px,1.4fr) minmax(140px,1fr) minmax(190px,1.25fr)}
+@media(max-width:640px){footer.universe-site-footer .container.universe-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.universe-footer-bridge{grid-column:1/-1}}
