@@ -46,3 +46,9 @@ footer.universe-site-footer{margin-top:0;padding:0 0 0;background:#0d1111;border
 .universe-site-footer .universe-footer-grid{width:min(1180px,calc(100% - 40px))}
 .universe-footer-home img{width:70px;height:48px}
 @media(max-width:750px){nav ul li.universe-nav-item{display:inline-flex}.universe-menu{left:0;right:auto}}
+
+
+/* Footer selectors override the legacy flex wrapper without altering other sections. */
+footer.universe-site-footer .container.universe-footer-grid{display:grid;align-items:start;justify-content:initial}
+footer.universe-site-footer .container.universe-footer-bottom{display:flex;align-items:center;justify-content:space-between}
+footer.universe-site-footer .universe-footer-home img{width:70px;height:48px;object-position:left center}
