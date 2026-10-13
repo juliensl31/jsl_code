@@ -10,6 +10,7 @@
     <link rel="canonical" href="https://jslcode.com/">
     <link href="black-lime.css" rel="stylesheet">
     <link href="soft-dark.css" rel="stylesheet">
+    <link href="universes.css" rel="stylesheet">
 
     <script defer src="site.js"></script>
     <meta name="theme-color" content="#111111">
@@ -38,6 +39,19 @@
                     <li><a href="#realisations">Réalisations</a></li>
                     <li><a href="#apropos">À propos</a></li>
                     <li><a href="#certifications">Certifications</a></li>
+                    <li class="universe-nav-item"><div class="universe-switch" data-universe-switch>
+  <button class="universe-trigger" type="button" data-universe-trigger aria-haspopup="true" aria-expanded="false" aria-controls="universe-menu">Nos univers <span class="universe-chevron" aria-hidden="true"></span></button>
+  <div class="universe-menu" id="universe-menu" data-universe-menu hidden>
+    <a class="universe-entry" href="https://jslcode.com" aria-current="page">
+      <img src="https://jslcode.com/images/jsl-google-icon.png" alt="" loading="lazy">
+      <span class="universe-entry-copy"><strong>JSL Code</strong><small>Développement web &amp; outils numériques</small></span><span class="universe-current">Actuel</span>
+    </a>
+    <a class="universe-entry" href="https://obskkur.com" >
+      <img src="https://obskkur.com/obskkur-logo.svg" alt="" loading="lazy">
+      <span class="universe-entry-copy"><strong>OBSKKUR</strong><small>Infrastructure IT &amp; cybersécurité</small></span>
+    </a>
+  </div>
+</div></li>
                     <li><a class="nav-contact" href="mailto:hello@jslcode.com">Me contacter</a></li>
                 </ul>
             </nav>
@@ -284,6 +298,7 @@
     </main>
     <footer>
         <div class="container">
+            <a class="universe-footer-link" href="https://obskkur.com"><img src="https://obskkur.com/obskkur-logo.svg" alt="" loading="lazy"><span><strong>Découvrir OBSKKUR</strong><small>Infrastructure, supervision et cybersécurité.</small></span></a>
             <span class="footer-copyright">© <span id="current-year">2026</span> JSL Code | Tous droits réservés</span>
             <ul>
                 <li><a href="CG/mentions_legales.html">Mentions légales</a></li>
